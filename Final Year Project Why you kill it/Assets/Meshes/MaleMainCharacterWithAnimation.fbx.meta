@@ -21,6 +21,12 @@ ModelImporter:
   - first:
       74: -4027686426356288868
     second: metarig|Walking
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+  externalObjects: {}
+=======
+>>>>>>> Stashed changes
   - first:
       74: -3287340468352638513
     second: metarig|idel (1)
@@ -38,6 +44,7 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Main
     second: {fileID: 2100000, guid: 6f098815c7391684fb49ff3da9634200, type: 2}
+>>>>>>> 1bd02d05ee2d4d7af72725ca59eb5decbebca113
   materials:
     materialImportMode: 2
     materialName: 0

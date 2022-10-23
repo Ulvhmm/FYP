@@ -250,7 +250,7 @@ Transform:
   - {fileID: 2003444273}
   - {fileID: 991885084}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &166340016
 GameObject:
@@ -391,9 +391,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1328593188}
   - {fileID: 529373655}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &529373654
 GameObject:
@@ -426,7 +427,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 357273970}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &529373656
 MeshRenderer:
@@ -510,7 +511,7 @@ Transform:
   - {fileID: 122691864}
   - {fileID: 1650535758}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &963194225
 GameObject:
@@ -698,11 +699,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 357273970}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b76e91a66998480488656726b3cd401a, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b76e91a66998480488656726b3cd401a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -710,11 +711,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b76e91a66998480488656726b3cd401a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7300005
+      value: -0.5650005
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b76e91a66998480488656726b3cd401a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.2358322
+      value: 9.914167
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b76e91a66998480488656726b3cd401a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -722,15 +723,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b76e91a66998480488656726b3cd401a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b76e91a66998480488656726b3cd401a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b76e91a66998480488656726b3cd401a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b76e91a66998480488656726b3cd401a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -750,6 +751,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b76e91a66998480488656726b3cd401a, type: 3}
+--- !u!4 &1328593188 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b76e91a66998480488656726b3cd401a, type: 3}
+  m_PrefabInstance: {fileID: 1328593187}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1338390282
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,7 +945,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
 --- !u!1 &1464616836
 GameObject:
@@ -1033,7 +1039,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1650535757
 GameObject:
@@ -1224,7 +1230,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
 --- !u!1 &2003444272
 GameObject:

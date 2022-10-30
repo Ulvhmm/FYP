@@ -4,51 +4,72 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public CharacterController character;
+    public CharacterController controller;
     public Transform cam;
     public Animator animator;
-    public float CharacterMovSpeed = 2f;
-    public float CharacterRotSpeed = 4f;
 
-    Vector3 moveDirection;
-    Vector3 lastPost;
+    Vector3 playerVelocity;
+    float gravityForce = -20f;
+    public float speed = 6f;
 
-    void Start()
-    {
-        animator.GetComponent<Animator>();
-    }
+    public float turnSmoothTime = 0.1f;
+    float turnSmoothVelocity;
 
+    public bool isAttacking = false;
+
+    // Update is called once per frame
     void Update()
     {
-        //Velocity
-        float velocity = (character.transform.position - lastPost / Time.deltaTime).magnitude;
+        //movement
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
+        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
-        lastPost = character.transform.position;
+        if(direction.magnitude >= 0.1f)
+        {
+            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y; ;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
-        float sideMove = 0;
-        float forwardMove = 0;
+            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+            controller.Move(moveDir.normalized * speed * Time.deltaTime);
+        }
 
-        sideMove += Input.GetAxis("Horizontal");
-        forwardMove += Input.GetAxis("Vertical");
+        //attack
+        if (Input.GetKeyDown(KeyCode.Mouse0) && isAttacking == false)
+        {
+            isAttacking = true;
+            animator.SetBool("isAttacking", true);
+            StartCoroutine(Attacking());
+        }
 
-        Vector3 sideMoveScreen = Quaternion.Euler(0f, cam.eulerAngles.y, 0f) * Vector3.right;
-        Vector3 forwardMoveScreen = Quaternion.Euler(0f, cam.eulerAngles.y, 0f) * Vector3.forward;
-
-        moveDirection = sideMoveScreen * sideMove + forwardMoveScreen * forwardMove;
-        character.Move(moveDirection * CharacterMovSpeed * Time.deltaTime);
-
-        Quaternion characterLookDirection = Quaternion.LookRotation(moveDirection);
-
-        if(moveDirection.magnitude > 0f)
-        character.transform.rotation = Quaternion.Slerp(character.transform.rotation, characterLookDirection, CharacterRotSpeed * Time.deltaTime);
-
-        if (sideMove != 0  || forwardMove != 0)
+        //walking
+        if (Input.GetAxis("Vertical") != 0 | Input.GetAxis("Horizontal") != 0)
         {
             animator.SetBool("isWalking", true);
         }
-        else
-        {
-            animator.SetBool("isWalking", false);
+        else 
+        { 
+            animator.SetBool("isWalking", false); 
         }
+
+        //isGrounded check
+        if (controller.isGrounded)
+        {
+            playerVelocity.y = 0f;
+        }
+        playerVelocity.y += gravityForce * Time.deltaTime;
+
+        controller.Move(playerVelocity * Time.deltaTime);
+    }
+
+    IEnumerator Attacking()
+    {
+        speed = 0f;
+        animator.SetBool("isAttacking", true);
+        yield return new WaitForSeconds(1f);
+        animator.SetBool("isAttacking", false);
+        isAttacking = false;
+        speed = 6f;
     }
 }

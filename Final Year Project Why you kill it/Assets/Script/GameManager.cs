@@ -18,12 +18,12 @@ public class GameManager : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.F1))
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
         if(Input.GetKeyDown(KeyCode.F2))
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(0);
         }
     }
 }

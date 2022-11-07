@@ -9,6 +9,6 @@ public class AtkGems : AutoCollect
         base.Interact();
         Destroy(gameObject);
         //Add Attributes
-        PlayerAttributes.instance.Attack += 1 * multiplier;
+        Player.instance.GetComponent<PlayerAttributes>().Attack += 1 * multiplier;
     }
 }

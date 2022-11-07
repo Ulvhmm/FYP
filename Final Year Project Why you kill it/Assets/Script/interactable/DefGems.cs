@@ -9,6 +9,6 @@ public class DefGems : AutoCollect
         base.Interact();
         Destroy(gameObject);
         //Add Attributes
-        PlayerAttributes.instance.Defence += 1 * multiplier;
+        Player.instance.GetComponent<PlayerAttributes>().Defence += 1 * multiplier;
     }
 }

@@ -16,6 +16,9 @@ public class PlayerMovement : MonoBehaviour
     float turnSmoothVelocity;
 
     public bool isAttacking = false;
+    public float atkRadius = 2f;
+
+    public bool isDead = false;
 
     // Update is called once per frame
     void Update()
@@ -53,6 +56,12 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isWalking", false); 
         }
 
+        //die
+        if (isDead = true)
+        {
+            //animator.SetBool("isDead", true);
+        }
+
         //isGrounded check
         if (controller.isGrounded)
         {
@@ -67,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
     {
         speed = 0f;
         animator.SetBool("isAttacking", true);
+
         yield return new WaitForSeconds(1f);
         animator.SetBool("isAttacking", false);
         isAttacking = false;

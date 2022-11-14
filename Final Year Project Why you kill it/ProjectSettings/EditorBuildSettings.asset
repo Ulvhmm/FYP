@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PlayerTest.unity
     guid: e9d3f3fbf9231ed43bb67fb2fcb76bc4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PuzzleTest.unity
     guid: 7f07d76e1ec827144930c15c7bc6ff10
   m_configObjects: {}

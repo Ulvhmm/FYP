@@ -8,11 +8,11 @@ public class HealthNumber : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Text>().text =  "" + Player.instance.GetComponent<PlayerAttributes>().Health;
+        GetComponent<Text>().text =  "" + Player.instance.GetComponent<health>().Health;
     }
 
     public void Update()
     {
-        GetComponent<Text>().text =  "" + Player.instance.GetComponent<PlayerAttributes>().Health;
+        GetComponent<Text>().text =  "" + Player.instance.GetComponent<health>().Health;
     }
 }

@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//function of displaying dialogue
 public class DialogueManager : MonoBehaviour
 {
     #region Singleton
     public static DialogueManager instance;
-    private void Awake()
+    void Awake()
     {
         instance = this;
     }
@@ -19,6 +20,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject dialogueUI;
     public Text nameUI;
     public Text sentenceUI;
+
 
     void Start()
     {
@@ -38,12 +40,13 @@ public class DialogueManager : MonoBehaviour
         }
 
         dialogueUI.SetActive(true);
-
         DisplayNextSentence();
     }
 
+
     public bool DisplayNextSentence()
     {
+
         if (names.Count == 0)
         {
             dialogueUI.SetActive(false);
@@ -55,5 +58,8 @@ public class DialogueManager : MonoBehaviour
             sentenceUI.text = sentences.Dequeue();
             return true;
         }
+
     }
+
+
 }

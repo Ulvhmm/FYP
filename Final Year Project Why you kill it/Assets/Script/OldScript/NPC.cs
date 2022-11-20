@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class NPC : Interactable
 {
-    public GameObject Mission;
-    public GameObject DisabledMission;
+    //public GameObject Mission;
+    //public GameObject DisabledMission;
 
     public Dialogue dialogue;
 
@@ -35,7 +35,7 @@ public class NPC : Interactable
         {
             DialogueManager.instance.StartDialogue(dialogue);
             firstInteraction = false;
-            DisabledMission.SetActive(false);
+            //DisabledMission.SetActive(false);
         }
 
         else
@@ -43,8 +43,8 @@ public class NPC : Interactable
             if (!DialogueManager.instance.DisplayNextSentence())
             {
                 firstInteraction = true;
-                Mission.SetActive(true);
-                DisabledNPC.SetActive(false);
+                //Mission.SetActive(true);
+                //DisabledNPC.SetActive(false);
 
                 if (nextNPC != null)
                 {

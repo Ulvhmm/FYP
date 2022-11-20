@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 113
+  controlID: 68
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 51
+  controlID: 111
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 52
+  controlID: 112
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -399,23 +399,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Meshes/Stages
+    - Assets/Meshes/Stages/Prefab
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Meshes/Stages
+  - Assets/Meshes/Stages/Prefab
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Document\document\school doc\fyp\FYP\Final Year Project Why
     you kill it
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 69}
-    m_SelectedIDs: 14760000
-    m_LastClickedID: 30228
-    m_ExpandedIDs: 000000000e7600001076000012760000147600001676000000ca9a3b
+    scrollPos: {x: 0, y: 167}
+    m_SelectedIDs: fe760000
+    m_LastClickedID: 30462
+    m_ExpandedIDs: 00000000de760000e0760000e2760000e4760000e6760000f076000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -443,7 +443,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000e76000010760000127600001476000016760000
+    m_ExpandedIDs: 00000000de760000e0760000e2760000e4760000e6760000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -471,7 +471,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300005822000090950000c069000066c90000eec10000f0c100007a31000000000000ea9000001291000044700000626e0000c4690000c6690000ec7200004631000078720000
+    m_ExpandedInstanceIDs: c62300005822000090950000c069000066c90000eec10000f0c100007a31000000000000ea9000001291000044700000626e0000c4690000c6690000ec7200004631000078720000fa760000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -570,10 +570,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 32}
-      m_SelectedIDs: e4eeffff
-      m_LastClickedID: -4380
-      m_ExpandedIDs: e6c2ffff50faffff
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 3466fefff0faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -855,9 +855,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -135.58795, y: 4.5771613, z: -0.8126097}
+    m_Target: {x: -133.40163, y: 11.907707, z: -9.590755}
     speed: 2
-    m_Value: {x: -135.58795, y: 4.5771613, z: -0.8126097}
+    m_Value: {x: -133.40163, y: 11.907707, z: -9.590755}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -904,13 +904,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.117723964, y: 0.8785769, z: -0.28133062, w: 0.36762252}
+    m_Target: {x: -0.02411557, y: -0.9695666, z: 0.21976234, w: -0.10628261}
     speed: 2
-    m_Value: {x: 0.12135629, y: 0.87336063, z: -0.27821654, w: 0.3809324}
+    m_Value: {x: -0.024442347, y: -0.96929353, z: 0.21970041, w: -0.10772433}
   m_Size:
-    m_Target: 42.333267
+    m_Target: 39.204666
     speed: 2
-    m_Value: 42.333267
+    m_Value: 39.204666
   m_Ortho:
     m_Target: 0
     speed: 2

@@ -43,7 +43,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.7529412, g: 0.42745098, b: 1, a: 1}
+  m_Color: {r: 0.7516564, g: 0.4292453, b: 1, a: 1}
   m_Intensity: 3
   m_Range: 10
   m_SpotAngle: 30
@@ -54,9 +54,9 @@ Light:
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 0.5
-    m_Bias: 0.538
-    m_NormalBias: 0.121
-    m_NearPlane: 0.17
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -104,7 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6265583112916054931}
   m_Layer: 0
-  m_Name: torchWithFire
+  m_Name: GreenFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1434,9 +1434,9 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.52670246, g: 0.09158063, b: 0.9245283, a: 0.22352941}
-        key1: {r: 0.5131011, g: 0.23602703, b: 0.9811321, a: 1}
-        key2: {r: 0.39902055, g: 0.3915094, b: 1, a: 0.827451}
+        key0: {r: 0.7504375, g: 0.029592399, b: 0.8962264, a: 0.22352941}
+        key1: {r: 0.7257964, g: 0.4575472, b: 1, a: 1}
+        key2: {r: 0.39084926, g: 0.3820755, b: 1, a: 0.827451}
         key3: {r: 0.39084926, g: 0.3820755, b: 1, a: 0.30980393}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}

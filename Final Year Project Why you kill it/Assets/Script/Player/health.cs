@@ -8,6 +8,7 @@ public class health : MonoBehaviour
     public bool isPlayer = false;
     int maxHealth = 100;
     public int Health = 500;
+    public int EnemyDef = 0;
 
     public Slider HP;
 
@@ -30,11 +31,9 @@ public class health : MonoBehaviour
 
         else
         {
-            damage = (AttackValue);
+            damage = (AttackValue - EnemyDef);
         }
 
-        damage = (AttackValue - PlayerDef);
-        Debug.Log(PlayerDef);
         Debug.Log(damage);
 
         Health -= damage;

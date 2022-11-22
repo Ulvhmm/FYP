@@ -1347,6 +1347,18 @@ MonoBehaviour:
   dialogueUI: {fileID: 1166519836}
   nameUI: {fileID: 1146956995}
   sentenceUI: {fileID: 624857836}
+--- !u!114 &328796107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328796092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3520554aa748134c871afd5ce6b1f9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &344570691 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ced7c103a8fc6df4da60517d2a6d6fcb, type: 3}
@@ -3723,6 +3735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   Health: 30
+  EnemyDef: 0
   HP: {fileID: 0}
 --- !u!114 &1089011910
 MonoBehaviour:
@@ -4336,7 +4349,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1219788266}
-  m_LocalRotation: {x: 0.19424808, y: 0.000000016878642, z: -0.0000000033423064, w: 0.98095244}
+  m_LocalRotation: {x: 0.19424808, y: -0.000000016878642, z: 0.0000000033423064, w: 0.98095244}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4833,7 +4846,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1310055342}
-  m_LocalRotation: {x: 0.04727471, y: 0.00000001782102, z: -8.4342644e-10, w: 0.99888194}
+  m_LocalRotation: {x: 0.04727472, y: -0.000000017507183, z: 8.285736e-10, w: 0.99888194}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6004,6 +6017,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   Health: 30
+  EnemyDef: 0
   HP: {fileID: 0}
 --- !u!114 &1608643887
 MonoBehaviour:
@@ -7238,7 +7252,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807009343}
-  m_LocalRotation: {x: 0.047274712, y: 0.00000003489454, z: -0.000000001651476, w: 0.998882}
+  m_LocalRotation: {x: 0.047274727, y: -0.000000034735315, z: 0.0000000016439407, w: 0.998882}
   m_LocalPosition: {x: 0, y: 3.85, z: 123.130005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9930,6 +9944,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   Health: 30
+  EnemyDef: 0
   HP: {fileID: 0}
 --- !u!1 &2050017725 stripped
 GameObject:
@@ -10323,8 +10338,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4201a8cf06fca0f4ca13f95ca46ed4be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayer: 0
+  isPlayer: 1
   Health: 500
+  EnemyDef: 0
   HP: {fileID: 0}
 --- !u!1 &2114326151 stripped
 GameObject:

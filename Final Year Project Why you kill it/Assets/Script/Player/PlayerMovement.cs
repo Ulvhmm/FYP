@@ -17,8 +17,14 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isAttacking = false;
     public float atkRadius = 2f;
+    int attack;
 
     public bool isDead = false;
+
+    void Start()
+    {
+        attack = Player.instance.GetComponent<PlayerAttributes>().Attack;
+    }
 
     // Update is called once per frame
     void Update()
@@ -72,12 +78,24 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(playerVelocity * Time.deltaTime);
     }
 
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, atkRadius);
+    }
+
     IEnumerator Attacking()
     {
         speed = 0f;
         animator.SetBool("isAttacking", true);
+        yield return new WaitForSeconds(0.5f);
 
-        yield return new WaitForSeconds(1f);
+        if (Vector3.Distance(transform.position, Player.instance.transform.position) < atkRadius)
+        {
+            Player.instance.GetComponent<health>().deductHealth(attack);
+        }
+
+        yield return new WaitForSeconds(0.5f);
         animator.SetBool("isAttacking", false);
         isAttacking = false;
         speed = 6f;

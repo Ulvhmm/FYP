@@ -12,10 +12,17 @@ public class OpenRedDoor : Interactable
         {
             base.Interact();
             animator.SetBool("isOpen", true);
+            StartCoroutine(DestroyRedDoor());
             //Deduct key
             Player.instance.GetComponent<PlayerKeys>().Red_Key -= 1;
         }
 
         else return;
+    }
+
+    IEnumerator DestroyRedDoor()
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(gameObject);
     }
 }

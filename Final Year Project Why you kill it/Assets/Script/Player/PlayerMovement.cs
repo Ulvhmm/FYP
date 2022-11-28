@@ -90,6 +90,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("isAttacking", true);
         yield return new WaitForSeconds(0.5f);
 
+        //player damaging enemy (needs to be fixed)
         if (Vector3.Distance(transform.position, Player.instance.transform.position) < atkRadius)
         {
             Player.instance.GetComponent<health>().deductHealth(attack);

@@ -12,10 +12,18 @@ public class OpenYellowDoor : Interactable
         {
             base.Interact();
             animator.SetBool("isOpen", true);
+            StartCoroutine(DestroyYellowDoor());
             //Deduct key
             Player.instance.GetComponent<PlayerKeys>().Yellow_Key -= 1;
         }
 
         else return;
     }
+
+    IEnumerator DestroyYellowDoor()
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(gameObject);
+    }
+
 }

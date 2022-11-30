@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isAttacking = false;
     public float atkRadius = 2f;
-    int attack;
+    public int attack;
 
     public bool isDead = false;
 
@@ -88,15 +88,7 @@ public class PlayerMovement : MonoBehaviour
     {
         speed = 0f;
         animator.SetBool("isAttacking", true);
-        yield return new WaitForSeconds(0.5f);
-
-        //player damaging enemy (needs to be fixed)
-        if (Vector3.Distance(transform.position, Player.instance.transform.position) < atkRadius)
-        {
-            Player.instance.GetComponent<health>().deductHealth(attack);
-        }
-
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         animator.SetBool("isAttacking", false);
         isAttacking = false;
         speed = 6f;

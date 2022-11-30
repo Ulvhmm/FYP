@@ -245,6 +245,7 @@ GameObject:
   - component: {fileID: 2831702113668848635}
   - component: {fileID: 2831702113668848639}
   - component: {fileID: 2831702113668848637}
+  - component: {fileID: 8607383072726013744}
   m_Layer: 0
   m_Name: spider
   m_TagString: Untagged
@@ -353,6 +354,20 @@ MonoBehaviour:
   Health: 30
   EnemyDef: 0
   HP: {fileID: 0}
+--- !u!114 &8607383072726013744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3138256601220054925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8ccba53f48797409c21a480ff14288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableRadius: 2
+  interactableAngle: 180
 --- !u!1 &3673915446602530260
 GameObject:
   m_ObjectHideFlags: 0

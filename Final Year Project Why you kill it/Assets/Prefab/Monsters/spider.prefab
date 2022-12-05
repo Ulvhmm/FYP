@@ -366,8 +366,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef8ccba53f48797409c21a480ff14288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableRadius: 2
-  interactableAngle: 180
+  interactableRadius: 5
+  interactableAngle: 90
+  AttackDelay: 0.5
 --- !u!1 &3673915446602530260
 GameObject:
   m_ObjectHideFlags: 0

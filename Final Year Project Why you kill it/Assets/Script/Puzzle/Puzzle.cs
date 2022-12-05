@@ -2,33 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Puzzle : MonoBehaviour
+public class Puzzle : Interactable
 {
-    public GameObject LeftAlter;
     public GameObject SelfAlter;
-    public GameObject RightAlter;
+    public GameObject SideAlter1;
+    public GameObject SideAlter2;
 
-    // Start is called before the first frame update
-    void Start()
+    public AudioSource audioSource;
+
+    public override void Interact()
     {
-        if (SelfAlter.activeSelf)
-        {
-            PuzzleManager.instance.LightedCrystal += 1;
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    public void ChangeAlterStatus()
-    {
-        LeftAlter.SetActive(!LeftAlter.activeSelf);
         SelfAlter.SetActive(!SelfAlter.activeSelf);
-        RightAlter.SetActive(!RightAlter.activeSelf);
-
+        audioSource.Play();
         if (SelfAlter.activeSelf)
         {
             PuzzleManager.instance.LightedCrystal += 1;
@@ -38,7 +23,8 @@ public class Puzzle : MonoBehaviour
             PuzzleManager.instance.LightedCrystal -= 1;
         }
 
-        if (LeftAlter.activeSelf)
+        SideAlter1.SetActive(!SideAlter1.activeSelf);
+        if (SideAlter1.activeSelf)
         {
             PuzzleManager.instance.LightedCrystal += 1;
         }
@@ -47,7 +33,8 @@ public class Puzzle : MonoBehaviour
             PuzzleManager.instance.LightedCrystal -= 1;
         }
 
-        if (RightAlter.activeSelf)
+        SideAlter2.SetActive(!SideAlter2.activeSelf);
+        if (SideAlter2.activeSelf)
         {
             PuzzleManager.instance.LightedCrystal += 1;
         }

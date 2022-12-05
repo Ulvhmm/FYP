@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //die
-        if (isDead = true)
+        if (isDead == true)
         {
             //animator.SetBool("isDead", true);
         }
@@ -88,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
     {
         speed = 0f;
         animator.SetBool("isAttacking", true);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.3f);
         animator.SetBool("isAttacking", false);
         isAttacking = false;
         speed = 6f;

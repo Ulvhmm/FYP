@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 3223528901690338439}
   - component: {fileID: 3223528901690338436}
   - component: {fileID: 531237812228524644}
+  - component: {fileID: -3480066983918068312}
   m_Layer: 0
   m_Name: bat
   m_TagString: Untagged
@@ -136,8 +137,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef8ccba53f48797409c21a480ff14288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableRadius: 1.5
-  interactableAngle: 180
+  interactableRadius: 3
+  interactableAngle: 90
+  AttackDelay: 0.5
+--- !u!114 &-3480066983918068312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2341079765611523697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4201a8cf06fca0f4ca13f95ca46ed4be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  Health: 15
+  EnemyDef: 0
+  HP: {fileID: 0}
 --- !u!1 &3356855640596824427
 GameObject:
   m_ObjectHideFlags: 0

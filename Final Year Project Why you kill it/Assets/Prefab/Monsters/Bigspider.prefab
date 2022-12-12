@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRadius: 2.5
-  alertRadius: 5
+  alertRadius: 7
   movingSpeed: 2
   attack: 10
   CD: 0.5
@@ -367,7 +367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableRadius: 5
-  interactableAngle: 90
+  interactableAngle: 50
   AttackDelay: 0.5
 --- !u!1 &3673915446602530260
 GameObject:

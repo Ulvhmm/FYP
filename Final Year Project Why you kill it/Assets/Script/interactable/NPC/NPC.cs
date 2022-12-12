@@ -34,6 +34,7 @@ public class NPC : Interactable
         if (firstInteraction)
         {
             DialogueManager.instance.StartDialogue(dialogue);
+            Player.instance.GetComponent<PlayerMovement>().canMove = false;
             firstInteraction = false;
             //DisabledMission.SetActive(false);
         }
@@ -43,6 +44,7 @@ public class NPC : Interactable
             if (!DialogueManager.instance.DisplayNextSentence())
             {
                 firstInteraction = true;
+                Player.instance.GetComponent<PlayerMovement>().canMove = true;
                 //Mission.SetActive(true);
                 //DisabledNPC.SetActive(false);
 

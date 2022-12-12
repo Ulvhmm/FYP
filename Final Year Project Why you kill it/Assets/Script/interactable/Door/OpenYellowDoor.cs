@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OpenYellowDoor : OnceInteract
+public class OpenYellowDoor : Interactable
 {
     public Animator animator;
 

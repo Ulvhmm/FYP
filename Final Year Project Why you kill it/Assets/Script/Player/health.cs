@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class health : MonoBehaviour
 {
     public bool isPlayer = false;
+    public bool TrapBoss = false;
     int maxHealth = 100;
     public int Health = 500;
     public int EnemyDef = 0;
 
     public Slider HP;
+    public GameObject TrapDoor;
 
     int damage;
 
@@ -51,6 +53,12 @@ public class health : MonoBehaviour
             {
                 Player.instance.GetComponent<PlayerMovement>().isDead = true;
             }
+
+            else if (TrapBoss)
+            {
+                StartCoroutine(OpenTrapDoor());
+            }
+
             else
             {
                 StartCoroutine(EnemyDie());
@@ -73,8 +81,18 @@ public class health : MonoBehaviour
         gameObject.GetComponent<EnemyMovement>().attackRadius = 0f;
         gameObject.GetComponent<EnemyMovement>().alertRadius = 0f;
         gameObject.GetComponent<EnemyMovement>().movingSpeed = 0f;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2f);
         Destroy(gameObject);
     }
 
+    IEnumerator OpenTrapDoor()
+    {
+        gameObject.GetComponent<Animator>().SetBool("isDead", true);
+        gameObject.GetComponent<EnemyMovement>().attackRadius = 0f;
+        gameObject.GetComponent<EnemyMovement>().alertRadius = 0f;
+        gameObject.GetComponent<EnemyMovement>().movingSpeed = 0f;
+        yield return new WaitForSeconds(2f);
+        Destroy(gameObject);
+        TrapDoor.SetActive(false);
+    }
 }

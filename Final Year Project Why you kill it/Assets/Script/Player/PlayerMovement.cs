@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     public int attack;
 
     public bool isDead = false;
+    public bool canMove = true;
 
     void Start()
     {
@@ -34,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
-        if(direction.magnitude >= 0.1f)
+        if(canMove && direction.magnitude >= 0.1f)
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y; ;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
@@ -45,15 +46,16 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //attack
-        if (Input.GetKeyDown(KeyCode.Mouse0) && isAttacking == false)
+        if (canMove && Input.GetKeyDown(KeyCode.Mouse0) && isAttacking == false)
         {
             isAttacking = true;
+            canMove = false;
             animator.SetBool("isAttacking", true);
             StartCoroutine(Attacking());
         }
 
         //walking
-        if (Input.GetAxis("Vertical") != 0 | Input.GetAxis("Horizontal") != 0)
+        if (canMove && Input.GetAxis("Vertical") != 0 | Input.GetAxis("Horizontal") != 0)
         {
             animator.SetBool("isWalking", true);
         }
@@ -86,11 +88,10 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator Attacking()
     {
-        speed = 0f;
         animator.SetBool("isAttacking", true);
         yield return new WaitForSeconds(1.3f);
         animator.SetBool("isAttacking", false);
         isAttacking = false;
-        speed = 6f;
+        canMove = true;
     }
 }

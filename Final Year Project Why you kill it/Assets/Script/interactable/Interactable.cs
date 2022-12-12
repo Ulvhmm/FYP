@@ -7,7 +7,7 @@ public class Interactable : MonoBehaviour
     public float interactableRadius = 5;
     public float interactableAngle = 80;
 
-    public GameObject BannerForInteractables;
+    //public GameObject BannerForInteractables;
 
     Transform player;
 
@@ -35,7 +35,7 @@ public class Interactable : MonoBehaviour
             //BannerForInteractables.SetActive(false);
         }
 
-        if (distance < interactableRadius && angle < interactableAngle && Input.GetKeyDown(KeyCode.E))   // press "E" to interact with objects
+        if (distance < interactableRadius && angle < interactableAngle && Input.GetKeyDown(KeyCode.Space))   // press "E" to interact with objects
         {
             Interact();
             //BannerForInteractables.SetActive(false);

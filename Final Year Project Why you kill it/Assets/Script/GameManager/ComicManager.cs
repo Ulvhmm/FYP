@@ -25,10 +25,12 @@ public class ComicManager : MonoBehaviour
 
     void Update() {
         if(Input.GetKeyDown(KeyCode.E)){
-            ChangePage1();
-            
+            keypressed += 1;
         }
 
+        if(keypressed == 0){
+            ChangePage1();
+        }
 
     }
 

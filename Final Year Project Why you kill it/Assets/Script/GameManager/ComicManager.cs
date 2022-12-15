@@ -5,42 +5,103 @@ using TMPro;
 
 public class ComicManager : MonoBehaviour
 {
-    [SerializeField] int letter;
+    public float textSpeed;
     [SerializeField] TextMeshProUGUI dialogBox;
+    public string[] lines;
 
+    private int index;
+
+    //pages
     public GameObject Page1;
     public GameObject Page2;
+    public GameObject Page3;
+    public GameObject Page4;
+    public GameObject Page5;
+    public GameObject Page6;
+
+
+    public GameObject DialogSprite;
     public int keypressed = 0;
 
-    public void ChangePage1(){
-        Page1.SetActive(false);
-        Page2.SetActive(true);
-    }
+   
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(Dialog("Dylen is missing."));
+        dialogBox.text = string.Empty;
+        ShowDialog();
     }
 
     void Update() {
         if(Input.GetKeyDown(KeyCode.E)){
+
             keypressed += 1;
+
+            if(dialogBox.text == lines[index]){
+                NextLine();
+            }else{
+                StopAllCoroutines();
+                dialogBox.text = lines[index];
+            }
         }
 
-        if(keypressed == 0){
-            ChangePage1();
+        switch (keypressed)
+        {
+            case 1:
+                Page1.SetActive(false);
+                Page2.SetActive(true);
+                break;
+            case 2:
+                Page2.SetActive(false);
+                Page3.SetActive(true);
+                break;
+            case 3:
+                break;
+            case 4:
+                Page3.SetActive(false);
+                Page4.SetActive(true);
+                break;
+            case 5:
+                Page4.SetActive(false);
+                Page5.SetActive(true);
+                break;
+            case 6:
+                Page5.SetActive(false);
+                Page6.SetActive(true);
+                break;
         }
+        
 
     }
 
-    public IEnumerator Dialog(string dialog){
+    //dialog related functions
+
+    void ShowDialog(){
+        index = 0;
+        StartCoroutine(Dialog());
+    }
+
+    IEnumerator Dialog(){
         dialogBox.text = "";
 
-        foreach (var text in dialog)
+        foreach (char c in lines[index].ToCharArray())
         {
-            dialogBox.text += text;
-            yield return new WaitForSeconds(1f / letter);
+            dialogBox.text += c;
+            yield return new WaitForSeconds(textSpeed);
         }
     }
+
+    void NextLine(){
+        if(index < lines.Length - 1){
+            index++;
+            dialogBox.text = string.Empty;
+            StartCoroutine(Dialog());
+        }else
+        {
+            dialogBox.enabled = false;
+            DialogSprite.SetActive(false);
+        }
+    }
+
+    
 }

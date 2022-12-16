@@ -1,29 +1,9 @@
 fileFormatVersion: 2
-guid: ba3fa2f1d60d6a54093307bd4ce63f3b
+guid: 2c953aa45e27e564c9d9257ad532f488
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Arm
-    second: {fileID: 6757367604217898905, guid: 93356cae64ca44948a0829578d4272da, type: 3}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BrickWall
-    second: {fileID: 2100000, guid: ece1242a46570ac4a95b94cdcfbc8d32, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Floor
-    second: {fileID: 2100000, guid: 1d5c6526bf8b07543be79ebbb4281f73, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Glass
-    second: {fileID: 2100000, guid: 7a497e631a97c3f4eaa6cad7a0aee1bf, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,23 +3,25 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
+    #region Singleton
+    public static UIManager instance;
+
+    // first function called in script 
+    void Awake()
+    {
+        instance = this;
+    }
+
+    #endregion
+
     public GameObject SettingsDialog;
     public GameObject ContributorDialog;
 
     // scene change
     public void StartGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-
-    /*
-    // lock/unlock mouse cursor
-    void Update()
-    {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-    }
-    */
     
     public void OpenSettings()
     {

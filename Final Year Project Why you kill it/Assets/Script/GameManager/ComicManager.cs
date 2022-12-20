@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ComicManager : MonoBehaviour
 {
@@ -19,11 +20,8 @@ public class ComicManager : MonoBehaviour
     public GameObject Page5;
     public GameObject Page6;
 
-
     public GameObject DialogSprite;
     public int keypressed = 0;
-
-   
 
     // Start is called before the first frame update
     void Start()
@@ -37,9 +35,11 @@ public class ComicManager : MonoBehaviour
 
             keypressed += 1;
 
-            if(dialogBox.text == lines[index]){
+            if (dialogBox.text == lines[index]){
                 NextLine();
-            }else{
+            }
+            else{
+
                 StopAllCoroutines();
                 dialogBox.text = lines[index];
             }
@@ -100,8 +100,7 @@ public class ComicManager : MonoBehaviour
         {
             dialogBox.enabled = false;
             DialogSprite.SetActive(false);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
-
-    
 }

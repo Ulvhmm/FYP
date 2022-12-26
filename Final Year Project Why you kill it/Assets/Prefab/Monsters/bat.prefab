@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 4445830393883306189}
   - component: {fileID: 4445830393883306188}
   m_Layer: 0
-  m_Name: Bat
+  m_Name: bat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRadius: 2
-  alertRadius: 10
+  alertRadius: 7
   movingSpeed: 3
   attack: 5
   CD: 0.5

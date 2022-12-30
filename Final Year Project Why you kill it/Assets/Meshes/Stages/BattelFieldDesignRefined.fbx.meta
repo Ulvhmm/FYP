@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Arm
-    second: {fileID: 976598575523648225, guid: f88dbd97af4668145a274a3bc334255d, type: 3}
+    second: {fileID: 976598575523648225, guid: 5f552ce113690ac4b890291965101dc1, type: 3}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

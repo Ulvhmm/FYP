@@ -7,13 +7,14 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject EscapePanel;
 
     // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            Application.Quit();
+            EscapePanel.SetActive(!EscapePanel.activeSelf);
         }
 
         if(Input.GetKeyDown(KeyCode.F1))

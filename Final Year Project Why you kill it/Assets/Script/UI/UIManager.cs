@@ -15,6 +15,9 @@ public class UIManager : MonoBehaviour
     #endregion
 
     public GameObject SettingsDialog;
+
+    public GameObject SettingButtons;
+    public GameObject Settings;
     public GameObject ContributorDialog;
 
     // scene change
@@ -22,10 +25,27 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(2);
+    }
+
     public void OpenSettings()
     {
         SettingsDialog.SetActive(true);
+    }
+
+    public void OpenGameSettings()
+    {
+        SettingButtons.SetActive(false);
+        Settings.SetActive(true);
+    }
+
+    public void CloseGameSettings()
+    {
+        SettingButtons.SetActive(true);
+        Settings.SetActive(false);
     }
 
     public void CloseSettings()

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class health : MonoBehaviour
 {
     public bool isPlayer = false;
-    public bool TrapBoss = false;
+    public bool isTrapBoss = false;
     int maxHealth = 100;
     public int Health = 500;
     public int EnemyDef = 0;
@@ -54,7 +54,7 @@ public class health : MonoBehaviour
                 Player.instance.GetComponent<PlayerMovement>().isDead = true;
             }
 
-            else if (TrapBoss)
+            else if (isTrapBoss)
             {
                 StartCoroutine(OpenTrapDoor());
             }

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4940308071192283693}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ThirdUpperArm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5008441702540517949}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Jaw1.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7889608029290101711}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ThirdUpperArm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4613978750857971070}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8040788940951356036}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6242536875649498323}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MidBody2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2636129229007303528}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FirstUpperArm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 2831702113668848639}
   - component: {fileID: 2831702113668848637}
   - component: {fileID: 8607383072726013744}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,8 +281,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.2, y: 1, z: 2}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1.2, y: 1.3678441, z: 2}
+  m_Center: {x: 0, y: 0.68392205, z: 0}
 --- !u!143 &2831702113668848638
 CharacterController:
   m_ObjectHideFlags: 0
@@ -297,7 +297,7 @@ CharacterController:
   m_Height: 0.1
   m_Radius: 0.4
   m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_StepOffset: 0
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.5, z: 0}
@@ -351,7 +351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
-  TrapBoss: 0
+  isTrapBoss: 0
   Health: 20
   EnemyDef: 1
   HP: {fileID: 0}
@@ -380,7 +380,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1241114751430665866}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FirstLowerArm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -411,7 +411,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1629812156563424013}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ThirdLowerArm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -442,7 +442,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5051098917047978674}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Face.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -474,7 +474,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2089181369351213578}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jaw2.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -505,7 +505,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1172722560093586157}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SecLowerArm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -536,7 +536,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7273081566210420099}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SecUpperArm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -568,7 +568,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6662607523123918249}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -600,7 +600,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4912614050078159558}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -632,7 +632,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4553518912662137545}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Face.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -664,7 +664,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3726902074862796278}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: jaw2.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -695,7 +695,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7342962400199507010}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MidBody1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -727,7 +727,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8595768038422595195}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SecLowerArm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -758,7 +758,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3645083777651766672}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SecUpperArm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -791,7 +791,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1962960382424471590}
   - component: {fileID: 448155390197124802}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -899,7 +899,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9020959527142666180}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FirstUpperArm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -931,7 +931,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1178314955648891116}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Jaw1.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -963,7 +963,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 639697859834686905}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ThirdLowerArm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -994,7 +994,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5092011259744194563}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FirstLowerArm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}

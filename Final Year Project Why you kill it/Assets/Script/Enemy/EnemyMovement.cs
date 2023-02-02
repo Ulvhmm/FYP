@@ -16,6 +16,7 @@ public class EnemyMovement : MonoBehaviour
     Animator animator;
 
     bool isAttacking = false;
+    bool CanMove = true;
 
     // Start is called before the first frame update
     void Start()
@@ -53,11 +54,14 @@ public class EnemyMovement : MonoBehaviour
 
             else
             {
-                // move towards player
-                animator.SetBool("isWalking", true);
+                if (CanMove)
+                {
+                    // move towards player
+                    animator.SetBool("isWalking", true);
 
-                Vector3 movingDirection = Vector3.Normalize(playerPosition - transform.position);
-                characterController.Move(movingDirection * Time.deltaTime * movingSpeed);
+                    Vector3 movingDirection = Vector3.Normalize(playerPosition - transform.position);
+                    characterController.Move(movingDirection * Time.deltaTime * movingSpeed);
+                }
             }
         }
         else
@@ -79,6 +83,7 @@ public class EnemyMovement : MonoBehaviour
     {
 
         animator.SetBool("isAttacking", true);
+        CanMove = false;
         yield return new WaitForSeconds(0.5f);
         
         if (Vector3.Distance(transform.position, Player.instance.transform.position) < attackRadius)
@@ -90,6 +95,6 @@ public class EnemyMovement : MonoBehaviour
 
         yield return new WaitForSeconds(CD);
         isAttacking = false;
-
+        CanMove = true;
     }
 }

@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 2831702113668848637}
   - component: {fileID: 8607383072726013744}
   m_Layer: 7
-  m_Name: spider
+  m_Name: RedSpider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -262,7 +262,7 @@ Transform:
   m_GameObject: {fileID: 3138256601220054925}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
   m_LocalPosition: {x: 2.9973743, y: -3.1236486, z: 50.48214}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6662607523123918249}
@@ -833,7 +833,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8df4596ed89e45d4a82e45c66c760c87, type: 2}
+  - {fileID: 2100000, guid: ee4b5547f129821458d2228dbf28b799, type: 2}
   - {fileID: 2100000, guid: b1790db611e5fe94b9d6e6baa756d133, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0

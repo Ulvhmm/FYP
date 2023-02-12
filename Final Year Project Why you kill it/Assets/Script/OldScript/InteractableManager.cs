@@ -14,7 +14,7 @@ public class InteractableManager : MonoBehaviour
         for (int i = 0; i < numberOfMaleZombies; i++)
         {
             Vector3 position = new Vector3(Random.Range(-350f, 350f), 0f, Random.Range(-350f, 350f));
-            Quaternion quaternion = Quaternion.Euler(0f, Random.Range(0, 359), 0f);
+            Quaternion quaternion = Quaternion.Euler(-90f, 90, 90f);
             Instantiate(maleZombie, position, quaternion);
         }
     }

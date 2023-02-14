@@ -5,7 +5,10 @@ using UnityEngine;
 public class Boss : MonoBehaviour
 {
     public int NumberOfFireball = 2;
+    public int NumberOfFireground = 2;
+
     public GameObject Fireball; 
+    public GameObject Fireground; 
 
     public bool ReadytoCast = true;
 
@@ -39,7 +42,7 @@ public class Boss : MonoBehaviour
                 StartCoroutine(SummonFireball());
                 break;
             case 2:
-                StartCoroutine(SummonFireball());
+                StartCoroutine(SummonFireground());
                 break;
             }
         }
@@ -56,6 +59,23 @@ public class Boss : MonoBehaviour
             Vector3 position = new Vector3(Random.Range(-13f, 13f), 75f, Random.Range(70f, 90f));
             Quaternion quaternion = Quaternion.Euler(-90f, 90, 90f);
             Instantiate(Fireball, position, quaternion);
+        }
+
+        yield return new WaitForSeconds(5);
+        ReadytoCast = true;
+        StartCoroutine(CastingAbility());
+    }
+
+    IEnumerator SummonFireground()
+    {
+        ReadytoCast = false;
+        Debug.Log("Casting Fireground");
+
+        for (int i = 0; i < NumberOfFireground; i++)
+        {
+            Vector3 position = new Vector3(Random.Range(-13f, 13f), 69.5f, Random.Range(70f, 90f));
+            Quaternion quaternion = Quaternion.Euler(-90f, 90, 90f);
+            Instantiate(Fireground, position, quaternion);
         }
 
         yield return new WaitForSeconds(5);

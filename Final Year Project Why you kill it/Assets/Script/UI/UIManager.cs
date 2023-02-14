@@ -20,6 +20,8 @@ public class UIManager : MonoBehaviour
     public GameObject Settings;
     public GameObject ContributorDialog;
 
+    public GameObject PurplePanel;
+
     // scene change
     public void StartGame()
     {
@@ -34,6 +36,16 @@ public class UIManager : MonoBehaviour
     public void OpenSettings()
     {
         SettingsDialog.SetActive(true);
+    }
+
+    public void OpenPurplePanel()
+    {
+        PurplePanel.SetActive(true);
+    }
+
+    public void ClosePurplePanel()
+    {
+        PurplePanel.SetActive(false);
     }
 
     public void OpenGameSettings()

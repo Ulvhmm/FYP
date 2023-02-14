@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 6576561735368691420}
   - component: {fileID: 2601055746830621913}
   - component: {fileID: 6455798239430404588}
-  - component: {fileID: -7304322550550818776}
   - component: {fileID: 187422306691884076}
+  - component: {fileID: 7078925216594986987}
   m_Layer: 0
-  m_Name: FireBall
+  m_Name: FireGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -752,7 +752,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.15
+      value: 5
       mode: 0
       spread: 0
       speed:
@@ -871,7 +871,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 50
+      scalar: 300
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4849,23 +4849,6 @@ MonoBehaviour:
   interactableRadius: 5
   interactableAngle: 50
   AttackDelay: 0.5
---- !u!114 &-7304322550550818776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271316969521146726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cc6615f55424674b833bc5445ca3fb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackRadius: 5
-  alertRadius: 200
-  movingSpeed: 3
-  attack: 10
-  CD: 0.5
 --- !u!143 &187422306691884076
 CharacterController:
   m_ObjectHideFlags: 0
@@ -4884,3 +4867,20 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7078925216594986987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271316969521146726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89bbac1cab310d84289983e8ec30b04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRadius: 5
+  movingSpeed: 0
+  attack: 10
+  CD: 0.5
+  PurplePanel: {fileID: 90858067962553826, guid: 290be8f8a8e7c634ea525392974a2d4c, type: 3}

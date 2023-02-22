@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             EscapePanel.SetActive(!EscapePanel.activeSelf);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
 
         if(Input.GetKeyDown(KeyCode.F1))

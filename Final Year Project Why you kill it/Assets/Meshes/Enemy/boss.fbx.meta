@@ -19,13 +19,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material
+      name: cloth
     second: {fileID: 2100000, guid: 6bf0f97ea4e183241a4d31290df2432d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: crystal
     second: {fileID: 2100000, guid: 9c99163a8c7d69044b93780b19a5043a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: skin
+    second: {fileID: 2100000, guid: 14197cb8ed4c3ea44b4a225c8546e331, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

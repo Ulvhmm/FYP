@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Enemy : Interatable
 {
-    public float AttackDelay = 0.5f;
-
     public override void Attack()
     {
         base.Attack();
@@ -15,8 +13,8 @@ public class Enemy : Interatable
 
     IEnumerator AttackRoutine()
     {
-        yield return new WaitForSeconds(AttackDelay);
+        yield return new WaitForSeconds(0.5f);
         GetComponent<health>().deductHealth(Player.instance.GetComponent<PlayerAttributes>().Attack);
-        yield return new WaitForSeconds(AttackDelay);
+        yield return new WaitForSeconds(0.5f);
     }
 }

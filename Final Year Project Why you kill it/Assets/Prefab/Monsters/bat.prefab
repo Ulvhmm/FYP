@@ -237,9 +237,10 @@ GameObject:
   - component: {fileID: 4445830393883306191}
   - component: {fileID: 4445830393883306189}
   - component: {fileID: 4445830393883306188}
+  - component: {fileID: 6783885228443336512}
   m_Layer: 7
   m_Name: bat
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -313,7 +314,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactableRadius: 2
   interactableAngle: 90
-  AttackDelay: 0.5
 --- !u!114 &4445830393883306189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,6 +349,19 @@ MonoBehaviour:
   EnemyDef: 0
   HP: {fileID: 0}
   TrapDoor: {fileID: 0}
+--- !u!65 &6783885228443336512
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4445830393883306178}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &6710576949308522742
 GameObject:
   m_ObjectHideFlags: 0

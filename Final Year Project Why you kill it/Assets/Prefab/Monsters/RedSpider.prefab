@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 8607383072726013744}
   m_Layer: 7
   m_Name: RedSpider
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -370,7 +370,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactableRadius: 5
   interactableAngle: 90
-  AttackDelay: 0.5
 --- !u!1 &3673915446602530260
 GameObject:
   m_ObjectHideFlags: 0

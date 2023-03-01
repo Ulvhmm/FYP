@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 8423266576605079248}
   m_Layer: 7
   m_Name: Slime
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -302,7 +302,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactableRadius: 3
   interactableAngle: 50
-  AttackDelay: 0.5
 --- !u!1 &8423266577022899313
 GameObject:
   m_ObjectHideFlags: 0

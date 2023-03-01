@@ -6,12 +6,13 @@ public class Projectile : MonoBehaviour
 {
     public GameObject impactVFX;
 
-    public float FireRangeTime = 0.5f;
+    public float FireRangeTime;
 
     private bool collided;
 
     void Update()
     {
+        FireRangeTime = Player.instance.GetComponent<TPSShooter>().Range;
         StartCoroutine(DestroyBullet());
     }
 

@@ -11,7 +11,7 @@ public class TPSShooter : MonoBehaviour
     public float projectileSpeed = 10;
     public float FireRate = 4;
 
-    public float FireRangeTime = 0.2f;
+    public float Range = 0.2f;
 
     private Vector3 destination;
     private float timeToFire;

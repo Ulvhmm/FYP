@@ -28,17 +28,17 @@ public class OnceInteract : MonoBehaviour
 
         if (distance < interactableRadius && angle < interactableAngle)  //show banner
         {
-            BannerForInteractables.SetActive(true);
+            //BannerForInteractables.SetActive(true);
         }
         else
         {
-            BannerForInteractables.SetActive(false);
+            //BannerForInteractables.SetActive(false);
         }
 
         if (distance < interactableRadius && angle < interactableAngle && Input.GetKeyDown(KeyCode.Space))   // press "Space" to interact with objects
         {
             Interact();
-            BannerForInteractables.SetActive(false);
+            //BannerForInteractables.SetActive(false);
         }
     }
 

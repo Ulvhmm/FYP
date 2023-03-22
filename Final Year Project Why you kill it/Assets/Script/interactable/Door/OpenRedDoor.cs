@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OpenRedDoor : Interactable
+public class OpenRedDoor : OnceInteract
 {
     public Animator animator;
 

@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1211
     height: 864
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: GlassBall
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 125
+  controlID: 71
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 66
+  controlID: 72
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 67
+  controlID: 73
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: MaterialGraphEditWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -215,16 +215,16 @@ MonoBehaviour:
     y: 0
     width: 733
     height: 596
-  m_MinSize: {x: 202, y: 221}
+  m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 14}
+  m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 14}
   - {fileID: 15}
   - {fileID: 16}
   - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 3
+  m_Selected: 2
+  m_LastSelected: 0
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -401,7 +401,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 80a50000
+      m_SelectedIDs: 7aa50000
       m_LastClickedID: 0
       m_ExpandedIDs: f0faffff
       m_RenameOverlay:
@@ -685,9 +685,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 8.6683035, y: 33.81955, z: 81.83999}
+    m_Target: {x: 3.2305326, y: 29.751484, z: 78.85947}
     speed: 2
-    m_Value: {x: 8.6683035, y: 33.81955, z: 81.83999}
+    m_Value: {x: 3.2305326, y: 29.751484, z: 78.85947}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -734,13 +734,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.04648235, y: 0.9324054, z: -0.12981328, w: 0.3344114}
+    m_Target: {x: 0.04079143, y: 0.93221873, z: -0.11130409, w: 0.34225503}
     speed: 2
-    m_Value: {x: 0.04667182, y: 0.93179893, z: -0.12972896, w: 0.33577222}
+    m_Value: {x: 0.04129997, y: 0.93194693, z: -0.11268982, w: 0.3421554}
   m_Size:
-    m_Target: 5.207182
+    m_Target: 6.147043
     speed: 2
-    m_Value: 5.207182
+    m_Value: 6.4366946
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1036,10 +1036,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 466
-    y: 73
-    width: 1539
-    height: 934
+    x: 908
+    y: 138
+    width: 731
+    height: 575
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1400,7 +1400,7 @@ MonoBehaviour:
     ],\n    \"synonyms\": [],\n    \"m_Precision\": 0,\n    \"m_PreviewExpanded\":
     true,\n    \"m_PreviewMode\": 0,\n    \"m_CustomColors\": {\n        \"m_SerializableColors\":
     []\n    },\n    \"m_SerializedDescriptor\": \"VertexDescription.Normal\"\n}\n\n"
-  m_AssetMaybeChangedOnDisk: 0
+  m_AssetMaybeChangedOnDisk: 1
   m_AssetMaybeDeleted: 0
 --- !u!114 &17
 MonoBehaviour:
@@ -1443,22 +1443,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Meshes/Character
+    - Assets/UI
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Meshes/Character
+  - Assets/UI
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Document\document\school doc\fyp\FYP\Final Year Project Why
     you kill it
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 143}
-    m_SelectedIDs: d6a40000
-    m_LastClickedID: 42198
+    scrollPos: {x: 0, y: 175}
+    m_SelectedIDs: e6a40000
+    m_LastClickedID: 42214
     m_ExpandedIDs: 00000000faa20000fca20000fea2000000a3000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0

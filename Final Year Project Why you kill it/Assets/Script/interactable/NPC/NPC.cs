@@ -13,7 +13,7 @@ public class NPC : Interactable
 
     public bool firstInteraction = true;
 
-    public NPC nextNPC;
+    public GameObject nextNPC;
 
     public GameObject ItemNumber;
 
@@ -46,11 +46,11 @@ public class NPC : Interactable
                 firstInteraction = true;
                 Player.instance.GetComponent<PlayerMovement>().canMove = true;
                 //Mission.SetActive(true);
-                //DisabledNPC.SetActive(false);
+                DisabledNPC.SetActive(false);
 
                 if (nextNPC != null)
                 {
-                    nextNPC.interactable = true;
+                    nextNPC.SetActive(true);
                 }
             }
         }

@@ -113,6 +113,8 @@ public class TradeManager : MonoBehaviour
     {
         Source.PlayOneShot(Clip3, 2f);
         TradePanel.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
 

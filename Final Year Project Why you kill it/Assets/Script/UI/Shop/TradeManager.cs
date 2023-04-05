@@ -34,9 +34,10 @@ public class TradeManager : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.V))
         {
-            TradePanel.SetActive(!TradePanel.activeSelf);
+            TradePanel.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            Time.timeScale = 0;
         }
     }
 
@@ -115,6 +116,7 @@ public class TradeManager : MonoBehaviour
         TradePanel.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        Time.timeScale = 1;
     }
 
 

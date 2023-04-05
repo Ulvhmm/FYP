@@ -22,10 +22,21 @@ public class TPSShooter : MonoBehaviour
         
     }
 
+    /*
     // Update is called once per frame
     void Update()
     {
         if(Input.GetMouseButtonDown(0) && Time.time >= timeToFire)
+        {
+            timeToFire = Time.time + 1/FireRate;
+            ShootProjectile();
+        }
+    }
+    */
+
+    public void Shooting()
+    {
+        if(Time.time >= timeToFire)
         {
             timeToFire = Time.time + 1/FireRate;
             ShootProjectile();

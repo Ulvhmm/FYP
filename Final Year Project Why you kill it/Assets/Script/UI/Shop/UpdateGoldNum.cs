@@ -8,6 +8,6 @@ public class UpdateGoldNum : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Text>().text =  "IF YOU PAY ME " + TradeManager.instance.CurrentMoneyTotal + " I CAN TURN IT INTO...";
+        GetComponent<Text>().text =  "IF YOU GIVE ME " + TradeManager.instance.CurrentMoneyTotal + " GOLD, I CAN TURN IT INTO...";
     }
 }

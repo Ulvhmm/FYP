@@ -67,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
         //die
         if (isDead == true)
         {
-            //animator.SetBool("isDead", true);
+            animator.SetBool("isDead", true);
         }
 
         //isGrounded check
@@ -89,7 +89,9 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator Attacking()
     {
         animator.SetBool("isAttacking", true);
-        yield return new WaitForSeconds(1.3f);
+        yield return new WaitForSeconds(0.5f);
+        Player.instance.GetComponent<TPSShooter>().Shooting();
+        yield return new WaitForSeconds(0.8f);
         animator.SetBool("isAttacking", false);
         isAttacking = false;
         canMove = true;

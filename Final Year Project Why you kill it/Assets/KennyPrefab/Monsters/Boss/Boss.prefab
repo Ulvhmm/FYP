@@ -296,13 +296,15 @@ GameObject:
   - component: {fileID: 3705398298068657990}
   - component: {fileID: 8412945703100852549}
   - component: {fileID: -2456939220978617089}
+  - component: {fileID: 5582677527652047595}
   - component: {fileID: 900730312487155955}
   - component: {fileID: 8085801224027987056}
   - component: {fileID: 6070950028058281360}
   - component: {fileID: -4720418323828366776}
   - component: {fileID: 2067233376230294174}
+  - component: {fileID: -5891503178426056741}
   m_Layer: 7
-  m_Name: boss
+  m_Name: Boss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -359,10 +361,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34952bc0ac0f129428644e37b305a596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NumberOfFireball: 2
-  NumberOfFireground: 2
-  Fireball: {fileID: 1271316969521146726, guid: 4261b8e3e97581c49a8c55482a8e5742, type: 3}
-  Fireground: {fileID: 1271316969521146726, guid: d2cfe946224d7e448b41e7e6402a5d7b, type: 3}
+  NumberOfGhostFire: 2
+  NumberOfLightning: 3
+  GhostFire: {fileID: 2806509697348045921, guid: 4261b8e3e97581c49a8c55482a8e5742, type: 3}
+  LightningGround: {fileID: 1271316969521146726, guid: d2cfe946224d7e448b41e7e6402a5d7b, type: 3}
+  IceStormGround: {fileID: 1271316969521146726, guid: d66512cf6ffad8d4a97c569a2f71f64b, type: 3}
+  IceStormVFX: {fileID: 5384837144607709921, guid: 3fb57dc469ccec543bade45b1c416e93, type: 3}
+  ReadytoCast: 1
+--- !u!114 &5582677527652047595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4046458641971707388}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82d991fdec2194b4f955e7d2f3ca23c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumberOfGhostFire: 2
+  NumberOfLightning: 2
+  GhostFire: {fileID: 0}
+  LightningGround: {fileID: 0}
+  IceStormGround: {fileID: 0}
+  IceStormVFX: {fileID: 0}
   ReadytoCast: 1
 --- !u!143 &900730312487155955
 CharacterController:
@@ -381,7 +404,7 @@ CharacterController:
   m_StepOffset: 0
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.93, z: -0.1}
+  m_Center: {x: 0, y: 0.61, z: -0.1}
 --- !u!114 &8085801224027987056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,6 +450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isTrapBoss: 0
+  isFinalBoss: 0
   Health: 15
   EnemyDef: 0
   HP: {fileID: 0}
@@ -442,8 +466,20 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.8467357, z: 0.78327674}
-  m_Center: {x: 0, y: 1.9111526, z: 0.0019587479}
+  m_Size: {x: 1, y: 2.3307605, z: 0.78327674}
+  m_Center: {x: 0, y: 1.6691402, z: 0.0019587677}
+--- !u!114 &-5891503178426056741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4046458641971707388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d88bd5c29f3b0c44f8e42c71fcb1c895, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4084347158988016135
 GameObject:
   m_ObjectHideFlags: 0

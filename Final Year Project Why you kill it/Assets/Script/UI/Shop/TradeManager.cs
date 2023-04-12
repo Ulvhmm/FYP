@@ -119,8 +119,6 @@ public class TradeManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
-
-
     IEnumerator NoMoney()
     {
         NoMoneyDisplay.SetActive(true);

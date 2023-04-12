@@ -9,9 +9,13 @@ public class FireballMovement : MonoBehaviour
     public float movingSpeed = 3f;
 
     public int attack = 10;
-    public float CD = 0.5f;
+
+    public float lifetime = 15.0f;
+    private float elapsedTime = 0.0f;
 
     CharacterController characterController;
+
+    public GameObject ExplosionPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -35,15 +39,21 @@ public class FireballMovement : MonoBehaviour
             
             if (distance < attackRadius)
             {
-                //atk
+                Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);
+                Player.instance.GetComponent<health>().deductHealth(attack);
+                Destroy(gameObject);
             }
-
         }
-        else
+
+        // Increment the elapsed time
+        elapsedTime += Time.deltaTime;
+
+        // Check if the elapsed time has exceeded the lifetime
+        if (elapsedTime >= lifetime)
         {
-
+            // Destroy the ability game object
+            Destroy(gameObject);
         }
-
     }
 
     private void OnDrawGizmosSelected()

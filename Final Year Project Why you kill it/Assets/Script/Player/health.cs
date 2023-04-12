@@ -7,12 +7,16 @@ public class health : MonoBehaviour
 {
     public bool isPlayer = false;
     public bool isTrapBoss = false;
+
+    public bool isFinalBoss = false;
+
     int maxHealth = 100;
     public int Health = 500;
     public int EnemyDef = 0;
 
     public Slider HP;
     public GameObject TrapDoor;
+    public GameObject DialogTitle;
 
     int damage;
 
@@ -64,6 +68,14 @@ public class health : MonoBehaviour
                 StartCoroutine(EnemyDie());
             }
 
+        }
+
+        if (isFinalBoss && Health <= 250)
+        {
+            GameObject theBoss = GameObject.Find("boss");
+            Destroy (theBoss.GetComponent<Boss>());
+            theBoss.GetComponent<BossEnraged>().enabled = true;
+            DialogTitle.SetActive(true);
         }
 
     }

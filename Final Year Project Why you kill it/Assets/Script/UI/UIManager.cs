@@ -30,7 +30,7 @@ public class UIManager : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Test1(TPP)");
     }
 
     public void OpenSettings()

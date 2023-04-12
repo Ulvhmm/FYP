@@ -4827,6 +4827,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRadius: 5
   movingSpeed: 0
-  attack: 100
+  attack: 150
   lifetime: 15
   LightningPrefab: {fileID: 8727876464947143751, guid: 0576991a9be3d9e4fab17be6f499db4d, type: 3}

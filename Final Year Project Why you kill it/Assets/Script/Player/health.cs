@@ -70,7 +70,7 @@ public class health : MonoBehaviour
 
         }
 
-        if (isFinalBoss && Health <= 250)
+        if (isFinalBoss && Health <= 500)
         {
             GameObject theBoss = GameObject.Find("boss");
             Destroy (theBoss.GetComponent<Boss>());

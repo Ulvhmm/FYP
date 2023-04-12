@@ -14,7 +14,7 @@ public class summonBoss : MonoBehaviour
     void OnTriggerEnter()
     {
         Boss.SetActive(true);
-        Source.PlayOneShot(Clip1, 0.6f);
+        Source.PlayOneShot(Clip1, 0.5f);
         bossIntro.SetActive(true);
 
         Destroy(this.gameObject);

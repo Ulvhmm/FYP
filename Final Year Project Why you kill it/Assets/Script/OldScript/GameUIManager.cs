@@ -16,7 +16,7 @@ public class GameUIManager : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Test1(TPP)");
     }
 
     public void BackToHomePage()

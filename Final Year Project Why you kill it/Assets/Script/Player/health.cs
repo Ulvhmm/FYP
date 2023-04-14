@@ -25,6 +25,7 @@ public class health : MonoBehaviour
     public void Update()
     {
         PlayerDef = Player.instance.GetComponent<PlayerAttributes>().Defence;
+        HP.value = Health;
     }
     
 

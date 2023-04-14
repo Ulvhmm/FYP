@@ -5,6 +5,7 @@ using UnityEngine;
 public class summonBoss : MonoBehaviour
 {
     public GameObject Boss;
+    public GameObject HealthBar;
 
     public AudioClip Clip1;
     public AudioSource Source;
@@ -14,6 +15,7 @@ public class summonBoss : MonoBehaviour
     void OnTriggerEnter()
     {
         Boss.SetActive(true);
+        HealthBar.SetActive(true);
         Source.PlayOneShot(Clip1, 0.5f);
         bossIntro.SetActive(true);
 

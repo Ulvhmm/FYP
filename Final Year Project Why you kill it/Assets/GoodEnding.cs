@@ -54,9 +54,10 @@ public class GoodEnding : MonoBehaviour
             Invoke("CoolDown", 3f);
 
             if (dialogBox.text == lines[index]){
-                if (keypressed == 3 || keypressed == 5 || keypressed == 7 || keypressed == 9 || keypressed == 10 || keypressed == 11 || keypressed == 12 || keypressed == 13 || keypressed == 14 || keypressed == 15 || keypressed == 16 || keypressed == 17 || keypressed == 18 || keypressed == 19 || keypressed == 20 || keypressed == 21 || keypressed == 22 || keypressed == 23 || keypressed == 24 || keypressed == 27 || keypressed == 29 || keypressed == 30)
+                if (keypressed == 3 || keypressed == 5 || keypressed == 7 || keypressed == 9 || keypressed == 10 || keypressed == 12 || keypressed == 13 || keypressed == 14 || keypressed == 15 || keypressed == 16 || keypressed == 17 || keypressed == 18 || keypressed == 19 || keypressed == 20 || keypressed == 21 || keypressed == 22 || keypressed == 23 || keypressed == 24 || keypressed == 27 || keypressed == 29 || keypressed == 30)
                 {
                     NextLine();
+                    Invoke("CoolDown", 1.5f);
                 }
                 else
                 {

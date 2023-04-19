@@ -54,6 +54,16 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(Attacking());
         }
 
+        //cast spell
+        if (canMove && Input.GetKeyDown(KeyCode.Mouse1) && isAttacking == false && Player.instance.GetComponent<PlayerAttributes>().Mana >= 10)
+        {
+            Player.instance.GetComponent<PlayerAttributes>().Mana -= 10;
+            isAttacking = true;
+            canMove = false;
+            animator.SetBool("isCasting", true);
+            StartCoroutine(Casting());
+        }
+
         //walking
         if (canMove && Input.GetAxis("Vertical") != 0 | Input.GetAxis("Horizontal") != 0)
         {
@@ -93,6 +103,17 @@ public class PlayerMovement : MonoBehaviour
         Player.instance.GetComponent<TPSShooter>().Shooting();
         yield return new WaitForSeconds(0.8f);
         animator.SetBool("isAttacking", false);
+        isAttacking = false;
+        canMove = true;
+    }
+
+    IEnumerator Casting()
+    {
+        animator.SetBool("isCasting", true);
+        yield return new WaitForSeconds(0.7f);
+        Player.instance.GetComponent<TPSShooter>().Shooting2();
+        yield return new WaitForSeconds(0.8f);
+        animator.SetBool("isCasting", false);
         isAttacking = false;
         canMove = true;
     }

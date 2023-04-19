@@ -22,6 +22,10 @@ public class Projectile : MonoBehaviour
         if (co.gameObject.tag == "Enemy")
         {
             collided = true;
+            if (Player.instance.GetComponent<PlayerAttributes>().Mana < 20)
+            {
+                Player.instance.GetComponent<PlayerAttributes>().Mana += 2;
+            }
             co.gameObject.GetComponent<health>().deductHealth(Player.instance.GetComponent<PlayerAttributes>().Attack);
             var impact = Instantiate(impactVFX, co.contacts[0].point, Quaternion.identity) as GameObject;
             Destroy(impact, 2);

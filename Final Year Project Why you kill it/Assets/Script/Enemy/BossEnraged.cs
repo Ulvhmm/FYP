@@ -22,10 +22,13 @@ public class BossEnraged : MonoBehaviour
     public GameObject IceStormGround;
     public GameObject IceStormVFX;
 
+    public AudioSource Source;
+
     public bool ReadytoCast = true;
 
     void Start()
     {
+        Source = GameObject.Find("Thunder").GetComponent<AudioSource>();
         StartCoroutine(CastingAbility());
         StartCoroutine(CastingAbility());
     }
@@ -89,8 +92,11 @@ public class BossEnraged : MonoBehaviour
             Instantiate(LightningGround, position, quaternion);
         }
 
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
+        Source.enabled = true;
+        yield return new WaitForSeconds(2);
         ReadytoCast = true;
+        Source.enabled = false;
         StartCoroutine(CastingAbility());
     }
 

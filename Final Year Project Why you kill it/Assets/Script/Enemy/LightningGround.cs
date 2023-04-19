@@ -26,11 +26,15 @@ public class LightningGround : MonoBehaviour
 
         Quaternion quaternion = Quaternion.Euler(-90f, 90, 90f);
 
-        if (isActive && distance < attackRadius)
+        if (isActive)
         {
             Instantiate(LightningPrefab, transform.position, quaternion);
-            Player.instance.GetComponent<health>().deductHealth(attack);
             Destroy(gameObject);
+
+            if (distance < attackRadius)
+            {
+                Player.instance.GetComponent<health>().deductHealth(attack);
+            }
         }
 
         // Increment the elapsed time

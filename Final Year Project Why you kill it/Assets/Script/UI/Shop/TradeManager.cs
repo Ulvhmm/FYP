@@ -30,7 +30,7 @@ public class TradeManager : MonoBehaviour
 
     public void Update()
     {
-        HealthValue = 100 + Player.instance.GetComponent<PlayerAttributes>().Buytime * 10;
+        HealthValue = 100 + Player.instance.GetComponent<PlayerAttributes>().Buytime * 20;
 
         if(Input.GetKeyDown(KeyCode.V))
         {
@@ -43,9 +43,10 @@ public class TradeManager : MonoBehaviour
 
     public void IncreaseHealth()
     {
+
         if (Player.instance.GetComponent<PlayerAttributes>().Currency >= CurrentMoneyTotal)
         {
-            Player.instance.GetComponent<health>().Health += HealthValue;
+            Player.instance.GetComponent<health>().Health += HealthValue + Player.instance.GetComponent<PlayerAttributes>().Buytime * 20 ;
             Player.instance.GetComponent<PlayerAttributes>().Currency -= CurrentMoneyTotal;
             CurrentMoneyTotal += 1;
             Player.instance.GetComponent<PlayerAttributes>().Buytime += 1;
@@ -91,7 +92,7 @@ public class TradeManager : MonoBehaviour
     {
         if (Player.instance.GetComponent<PlayerAttributes>().Currency >= CurrentMoneyTotal)
         {
-            Player.instance.GetComponent<PlayerAttributes>().Defence += 2;
+            Player.instance.GetComponent<PlayerAttributes>().Defence += 1;
             Player.instance.GetComponent<PlayerAttributes>().Currency -= CurrentMoneyTotal;
             CurrentMoneyTotal += 1;
             Player.instance.GetComponent<PlayerAttributes>().Buytime += 1;

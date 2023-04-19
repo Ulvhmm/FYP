@@ -50,6 +50,7 @@ public class health : MonoBehaviour
         }
 
         Health -= damage;
+        Debug.Log(damage);
         Health = Mathf.Max(Health, 0);
 
         if (Health <= 0)

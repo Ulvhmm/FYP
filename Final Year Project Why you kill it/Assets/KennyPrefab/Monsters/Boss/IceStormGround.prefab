@@ -4827,6 +4827,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRadius: 15
   movingSpeed: 0
-  attack: 50
+  attack: 100
   lifetime: 10
   healthDecreaseInterval: 0.5

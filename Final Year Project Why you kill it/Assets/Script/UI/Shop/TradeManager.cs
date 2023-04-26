@@ -31,23 +31,15 @@ public class TradeManager : MonoBehaviour
     public void Update()
     {
         HealthValue = 100 + Player.instance.GetComponent<PlayerAttributes>().Buytime * 20;
-
-        if(Input.GetKeyDown(KeyCode.V))
-        {
-            TradePanel.SetActive(true);
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-            Time.timeScale = 0;
-        }
     }
 
     public void IncreaseHealth()
     {
 
-        if (Player.instance.GetComponent<PlayerAttributes>().Currency >= CurrentMoneyTotal)
+        if (Player.instance.GetComponent<PlayerAttributes>().Gold >= CurrentMoneyTotal)
         {
             Player.instance.GetComponent<health>().Health += HealthValue + Player.instance.GetComponent<PlayerAttributes>().Buytime * 20 ;
-            Player.instance.GetComponent<PlayerAttributes>().Currency -= CurrentMoneyTotal;
+            Player.instance.GetComponent<PlayerAttributes>().Gold -= CurrentMoneyTotal;
             CurrentMoneyTotal += 1;
             Player.instance.GetComponent<PlayerAttributes>().Buytime += 1;
             StopAllCoroutines();
@@ -67,10 +59,10 @@ public class TradeManager : MonoBehaviour
 
     public void IncreaseAttack()
     {
-        if (Player.instance.GetComponent<PlayerAttributes>().Currency >= CurrentMoneyTotal)
+        if (Player.instance.GetComponent<PlayerAttributes>().Gold >= CurrentMoneyTotal)
         {
             Player.instance.GetComponent<PlayerAttributes>().Attack += 2;
-            Player.instance.GetComponent<PlayerAttributes>().Currency -= CurrentMoneyTotal;
+            Player.instance.GetComponent<PlayerAttributes>().Gold -= CurrentMoneyTotal;
             CurrentMoneyTotal += 1;
             Player.instance.GetComponent<PlayerAttributes>().Buytime += 1;
             StopAllCoroutines();
@@ -90,10 +82,10 @@ public class TradeManager : MonoBehaviour
 
     public void IncreaseDefence()
     {
-        if (Player.instance.GetComponent<PlayerAttributes>().Currency >= CurrentMoneyTotal)
+        if (Player.instance.GetComponent<PlayerAttributes>().Gold >= CurrentMoneyTotal)
         {
             Player.instance.GetComponent<PlayerAttributes>().Defence += 1;
-            Player.instance.GetComponent<PlayerAttributes>().Currency -= CurrentMoneyTotal;
+            Player.instance.GetComponent<PlayerAttributes>().Gold -= CurrentMoneyTotal;
             CurrentMoneyTotal += 1;
             Player.instance.GetComponent<PlayerAttributes>().Buytime += 1;
             StopAllCoroutines();

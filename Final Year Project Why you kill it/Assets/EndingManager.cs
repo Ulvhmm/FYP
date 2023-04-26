@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,18 +17,34 @@ public class EndingManager : MonoBehaviour
     }
     #endregion
 
-    public bool GoodEnding = false;
+    public bool isGoodEnding = false;
 
     public void JumpToEnding()
     {
-        if (GoodEnding)
+        if (isGoodEnding)
         {
-
+            StartCoroutine(GoodEnding());
         }
 
         else
         {
-
+            StartCoroutine(BadEnding());
         }
+    }
+
+    IEnumerator GoodEnding()
+    {
+        yield return new WaitForSeconds(2f);
+        FadePanel.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("GoodEnding");
+    }
+
+    IEnumerator BadEnding()
+    {
+        yield return new WaitForSeconds(2f);
+        FadePanel.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("BadEnding");
     }
 }

@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.098039225, b: 0, a: 1}
+  m_Color: {r: 0.7490196, g: 0.27058825, b: 0.21568628, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -421,7 +421,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4445830393883306178}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef8ccba53f48797409c21a480ff14288, type: 3}
   m_Name: 
@@ -443,7 +443,7 @@ MonoBehaviour:
   attackRadius: 2
   alertRadius: 10
   movingSpeed: 5
-  attack: 15
+  attack: 50
   CD: 0.5
 --- !u!114 &4445830393883306188
 MonoBehaviour:
@@ -460,8 +460,10 @@ MonoBehaviour:
   isPlayer: 0
   isTrapBoss: 0
   isFinalBoss: 0
-  Health: 50
-  EnemyDef: 8
+  Health: 120
+  EnemyDef: 25
+  EnemyExperience: 10
+  EnemyGold: 3
   HP: {fileID: 2834793980181085046}
   TrapDoor: {fileID: 0}
   DialogTitle: {fileID: 0}
@@ -515,7 +517,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -397.45126, y: -223.281}
+  m_AnchoredPosition: {x: -397.4273, y: -223.281}
   m_SizeDelta: {x: 300, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2834793980181085046
@@ -563,9 +565,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 50
+  m_MaxValue: 120
   m_WholeNumbers: 0
-  m_Value: 50
+  m_Value: 120
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -598,7 +600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1209875543252114042
 RectTransform:
   m_ObjectHideFlags: 0
@@ -616,8 +618,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -8.5, y: 0}
-  m_SizeDelta: {x: -17, y: 0}
+  m_AnchoredPosition: {x: -6, y: 0}
+  m_SizeDelta: {x: -22, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5076470586190575484
 CanvasRenderer:
@@ -640,7 +642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.5882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

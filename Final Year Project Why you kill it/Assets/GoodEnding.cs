@@ -27,6 +27,7 @@ public class GoodEnding : MonoBehaviour
     public GameObject Page10;
 
     public GameObject ContinueHint;
+    public GameObject BackButton;
 
     public GameObject DialogSprite;
     public int keypressed = 0;
@@ -35,6 +36,7 @@ public class GoodEnding : MonoBehaviour
     public bool isActive = true;
 
     public Animator BlackPanel;
+    public GameObject blackPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -57,7 +59,6 @@ public class GoodEnding : MonoBehaviour
                 if (keypressed == 3 || keypressed == 5 || keypressed == 7 || keypressed == 9 || keypressed == 10 || keypressed == 12 || keypressed == 13 || keypressed == 14 || keypressed == 15 || keypressed == 16 || keypressed == 17 || keypressed == 18 || keypressed == 19 || keypressed == 20 || keypressed == 21 || keypressed == 22 || keypressed == 23 || keypressed == 24 || keypressed == 27 || keypressed == 29 || keypressed == 30)
                 {
                     NextLine();
-                    Invoke("CoolDown", 1.5f);
                 }
                 else
                 {
@@ -316,6 +317,9 @@ public class GoodEnding : MonoBehaviour
         Page10.SetActive(true);
         yield return new WaitForSeconds (0.2f);
         BlackPanel.SetBool("isFade", false);
+        yield return new WaitForSeconds (2f);
+        blackPanel.SetActive(false);
+        BackButton.SetActive(true);
     }
 
 }

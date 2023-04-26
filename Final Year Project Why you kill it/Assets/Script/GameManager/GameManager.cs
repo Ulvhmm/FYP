@@ -12,21 +12,21 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             EscapePanel.SetActive(!EscapePanel.activeSelf);
+        }
+
+        if (EscapePanel.activeSelf)
+        {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            Time.timeScale = 0;
         }
-
-        if(Input.GetKeyDown(KeyCode.F1))
+        
+        else
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-
-        if(Input.GetKeyDown(KeyCode.F2))
-        {
-            SceneManager.LoadScene(0);
+            Time.timeScale = 1;
         }
     }
 }

@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     public bool isDead = false;
     public bool canMove = true;
 
+    public GameObject DeathPanel;
+
     void Start()
     {
         attack = Player.instance.GetComponent<PlayerAttributes>().Attack;
@@ -78,6 +80,16 @@ public class PlayerMovement : MonoBehaviour
         if (isDead == true)
         {
             animator.SetBool("isDead", true);
+            canMove = false;
+            Invoke("LockScreen", 1.5f);
+            StartCoroutine(ShowDeathPanel());
+        }
+
+        if (DeathPanel.activeSelf)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            Time.timeScale = 0;
         }
 
         //isGrounded check
@@ -116,5 +128,16 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("isCasting", false);
         isAttacking = false;
         canMove = true;
+    }
+
+    public void LockScreen()
+    {
+        Time.timeScale = 0;
+    }
+
+    IEnumerator ShowDeathPanel()
+    {
+        yield return new WaitForSeconds(1.5f);
+        DeathPanel.SetActive(true);
     }
 }

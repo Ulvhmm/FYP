@@ -23,9 +23,6 @@ public class EnemyMovement : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
-        //scarePanel.instance.OpenScarePanel();
-        //jumpScarePanel = GameObject.Find("ScarePanel"); // jump scare | find gameobject from prefab
-        //jumpScarePanel = GetComponent<GameObject>();
     }
 
     // Update is called once per frame

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6316483722894654581}
   - component: {fileID: 3342160276317615083}
   - component: {fileID: 5904117245118489325}
-  - component: {fileID: 8792028228652635052}
+  - component: {fileID: 1075649369527282075}
   m_Layer: 0
   m_Name: vfx_Projectile 2
   m_TagString: Bullet
@@ -65,7 +65,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!114 &8792028228652635052
+--- !u!114 &1075649369527282075
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 566700166814548133}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eb3ee8c0aea2f444805cf56f351aa7e, type: 3}
+  m_Script: {fileID: 11500000, guid: afe74ddec81e51648b561e49b2e47467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   impactVFX: {fileID: 4407949301495349093, guid: f4a2c5a35d81e59428692c2dac65496c, type: 3}
@@ -156,7 +156,7 @@ TrailRenderer:
   m_Time: 0.15
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.5
+    widthMultiplier: 1
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -171,7 +171,7 @@ TrailRenderer:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 0.01098901
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -183,8 +183,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0.48472303, b: 0, a: 1}
-      key1: {r: 1, g: 0.046096295, b: 0, a: 1}
+      key0: {r: 0.8867924, g: 0.32241425, b: 0.29699183, a: 1}
+      key1: {r: 1, g: 0.28665325, b: 0.033018887, a: 1}
       key2: {r: 0.7094221, g: 0, b: 1, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -260,7 +260,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5699824868440919429}
   serializedVersion: 8
-  lengthInSec: 5
+  lengthInSec: 2
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -335,7 +335,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.73
+      scalar: 0.8
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -388,8 +388,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.83
-      minScalar: 5
+      scalar: 3
+      minScalar: 0.3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -440,13 +440,13 @@ ParticleSystem:
         m_RotationOrder: 4
     startColor:
       serializedVersion: 2
-      minMaxState: 0
-      minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.6393718, b: 0, a: 1}
+      minMaxState: 2
+      minColor: {r: 1, g: 0.6079833, b: 0, a: 1}
+      maxColor: {r: 1, g: 0.3272367, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 1}
+        key0: {r: 1, g: 0, b: 0, a: 1}
+        key1: {r: 0.9811321, g: 0.7181736, b: 0, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -504,7 +504,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.43
+      scalar: 1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -884,7 +884,7 @@ ParticleSystem:
     angle: 15
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 0
+    radiusThickness: 0.3
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
@@ -955,7 +955,7 @@ ParticleSystem:
     m_SpriteRenderer: {fileID: 0}
     m_UseMeshMaterialIndex: 0
     m_UseMeshColors: 1
-    alignToDirection: 0
+    alignToDirection: 1
     m_Texture: {fileID: 0}
     m_TextureClipChannel: 3
     m_TextureClipThreshold: 0
@@ -964,10 +964,10 @@ ParticleSystem:
     m_TextureAlphaAffectsParticles: 1
     m_TextureBilinearFiltering: 0
     randomDirectionAmount: 0
-    sphericalDirectionAmount: 0
+    sphericalDirectionAmount: 1
     randomPositionAmount: 0
     radius:
-      value: 0.2
+      value: 0.1
       mode: 0
       spread: 0
       speed:
@@ -1085,9 +1085,9 @@ ParticleSystem:
     serializedVersion: 4
     rateOverTime:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 500
-      minScalar: 10
+      minMaxState: 3
+      scalar: 200
+      minScalar: 100
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1524,33 +1524,33 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.60659146, g: 0.19900322, b: 0.9811321, a: 0.22352941}
-        key1: {r: 0.36829355, g: 0.23529413, b: 0.98039216, a: 1}
-        key2: {r: 0.39902055, g: 0.3915094, b: 1, a: 0.827451}
-        key3: {r: 0.39902055, g: 0.3915094, b: 1, a: 0.30980393}
-        key4: {r: 0, g: 0, b: 0, a: 0}
+        key0: {r: 0.8207547, g: 0.119499795, b: 0.011614433, a: 1}
+        key1: {r: 0.9716981, g: 0.7953332, b: 0.5179334, a: 0.92941177}
+        key2: {r: 0.8018868, g: 0.58908314, b: 0.38203096, a: 0.53333336}
+        key3: {r: 0.8018868, g: 0.73763216, b: 0.38203096, a: 0.30980393}
+        key4: {r: 0.8301887, g: 0.82905304, b: 0.23104309, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 9445
-        ctime1: 32382
-        ctime2: 55127
-        ctime3: 55127
-        ctime4: 0
+        ctime0: 0
+        ctime1: 65535
+        ctime2: 65535
+        ctime3: 57632
+        ctime4: 56090
         ctime5: 0
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 8867
-        atime2: 30840
+        atime1: 65535
+        atime2: 65535
         atime3: 54934
         atime4: 0
         atime5: 0
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_NumColorKeys: 3
-        m_NumAlphaKeys: 4
+        m_NumColorKeys: 2
+        m_NumAlphaKeys: 2
       minGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}

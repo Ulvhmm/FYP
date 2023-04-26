@@ -14,13 +14,22 @@ public class UIManager : MonoBehaviour
 
     #endregion
 
-    public GameObject SettingsDialog;
+    public GameObject EscapePanel;
+
+    public GameObject MainMenu;
+    public GameObject SubMenu;
 
     public GameObject SettingButtons;
     public GameObject Settings;
+
+    public GameObject Guidebook;
+
     public GameObject ContributorDialog;
 
-    public GameObject PurplePanel;
+    public GameObject ScorePage;
+    public GameObject DialogObject;
+    public GameObject SkipObject;
+    public GameObject BackObject;
 
     // scene change
     public void StartGame()
@@ -28,41 +37,24 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    public void BackToHomePage()
+    {
+        SceneManager.LoadScene("TitleScreen");
+    }
+
     public void RestartGame()
     {
-        SceneManager.LoadScene("Test1(TPP)");
+        SceneManager.LoadScene("Main");
     }
 
     public void OpenSettings()
     {
-        SettingsDialog.SetActive(true);
-    }
-
-    public void OpenPurplePanel()
-    {
-        PurplePanel.SetActive(true);
-    }
-
-    public void ClosePurplePanel()
-    {
-        PurplePanel.SetActive(false);
-    }
-
-    public void OpenGameSettings()
-    {
-        SettingButtons.SetActive(false);
-        Settings.SetActive(true);
-    }
-
-    public void CloseGameSettings()
-    {
-        SettingButtons.SetActive(true);
-        Settings.SetActive(false);
+        EscapePanel.SetActive(true);
     }
 
     public void CloseSettings()
     {
-        SettingsDialog.SetActive(false);
+        EscapePanel.SetActive(false);
     }
 
     public void OpenContributorDialog()
@@ -78,5 +70,57 @@ public class UIManager : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    // Game UI
+    public void OpenEscapePanel()
+    {
+        EscapePanel.SetActive(true);
+    }
+
+    public void CloseEscapePanel()
+    {
+        EscapePanel.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Time.timeScale = 1;
+    }
+
+    public void OpenGame()
+    {
+        SubMenu.SetActive(false);
+    }
+
+    public void BackToMenu()
+    {
+        SubMenu.SetActive(false);
+    }
+
+    public void OpenGameSettings()
+    {
+        Settings.SetActive(true);
+    }
+
+    public void CloseGameSettings()
+    {
+        Settings.SetActive(false);
+    }
+
+    public void OpenGuidebook()
+    {
+        Guidebook.SetActive(true);
+    }
+
+     public void CloseGuidebook()
+    {
+        Guidebook.SetActive(false);
+    }
+
+    public void SkipEnding()
+    {
+        ScorePage.SetActive(true);
+        DialogObject.SetActive(false);
+        SkipObject.SetActive(false);
+        BackObject.SetActive(true);
     }
 }

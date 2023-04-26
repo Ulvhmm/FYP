@@ -10,9 +10,10 @@ public class health : MonoBehaviour
 
     public bool isFinalBoss = false;
 
-    int maxHealth = 100;
     public int Health = 500;
     public int EnemyDef = 0;
+    public int EnemyExperience = 0;
+    public int EnemyGold = 0;
 
     public Slider HP;
     public GameObject TrapDoor;
@@ -72,12 +73,17 @@ public class health : MonoBehaviour
 
         }
 
-        if (isFinalBoss && Health <= 500)
+        if (isFinalBoss && Health <= 1000)
         {
             GameObject theBoss = GameObject.Find("boss");
             Destroy (theBoss.GetComponent<Boss>());
             theBoss.GetComponent<BossEnraged>().enabled = true;
             DialogTitle.SetActive(true);
+        }
+
+        if (isFinalBoss && Health <= 0)
+        {
+            EndingManager.instance.JumpToEnding();
         }
 
     }
@@ -96,6 +102,9 @@ public class health : MonoBehaviour
         gameObject.GetComponent<EnemyMovement>().alertRadius = 0f;
         gameObject.GetComponent<EnemyMovement>().movingSpeed = 0f;
         yield return new WaitForSeconds(2f);
+        Player.instance.GetComponent<PlayerAttributes>().AddExperience(EnemyExperience);
+        Player.instance.GetComponent<PlayerAttributes>().Gold += EnemyGold;
+
         Destroy(gameObject);
     }
 
@@ -106,6 +115,9 @@ public class health : MonoBehaviour
         gameObject.GetComponent<EnemyMovement>().alertRadius = 0f;
         gameObject.GetComponent<EnemyMovement>().movingSpeed = 0f;
         yield return new WaitForSeconds(2f);
+        Player.instance.GetComponent<PlayerAttributes>().AddExperience(EnemyExperience);
+        Player.instance.GetComponent<PlayerAttributes>().Gold += EnemyGold;
+
         Destroy(gameObject);
         TrapDoor.SetActive(false);
     }

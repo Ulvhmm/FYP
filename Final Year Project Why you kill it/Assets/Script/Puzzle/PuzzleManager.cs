@@ -72,6 +72,7 @@ public class PuzzleManager : MonoBehaviour
             //PlayCutScene
             StartCoroutine(PlayCutScene());
             LightedCrystal = 0;
+            EndingManager.instance.isGoodEnding = true;
         }
     }
 
@@ -83,52 +84,52 @@ public class PuzzleManager : MonoBehaviour
         Music1.enabled = true;
         LASR1.SetActive(true);
 
-        yield return new WaitForSeconds(0.98f);
+        yield return new WaitForSeconds(1f);
         LASR2.SetActive(true);
 
-        yield return new WaitForSeconds(0.98f);
+        yield return new WaitForSeconds(1f);
         LASR3.SetActive(true);
 
-        yield return new WaitForSeconds(0.98f);
+        yield return new WaitForSeconds(1f);
         LASR4.SetActive(true);
 
-        yield return new WaitForSeconds(0.98f);
+        yield return new WaitForSeconds(1f);
         LASR5.SetActive(true);
 
-        yield return new WaitForSeconds(0.98f);
+        yield return new WaitForSeconds(1f);
         LASR6.SetActive(true);
 
-        yield return new WaitForSeconds(0.98f);
+        yield return new WaitForSeconds(1f);
         LASR7.SetActive(true);
 
-        yield return new WaitForSeconds(0.98f);
+        yield return new WaitForSeconds(1f);
         LASR8.SetActive(true);
 
-        yield return new WaitForSeconds(0.98f);
+        yield return new WaitForSeconds(1f);
         LASR9.SetActive(true);
 
-        yield return new WaitForSeconds(0.98f);
+        yield return new WaitForSeconds(1f);
         LASR10.SetActive(true);
 
-        yield return new WaitForSeconds(0.98f);
+        yield return new WaitForSeconds(1f);
         LASR11.SetActive(true);
 
-        yield return new WaitForSeconds(0.98f);
+        yield return new WaitForSeconds(1f);
         LASR12.SetActive(true);
 
-        yield return new WaitForSeconds(0.98f);
+        yield return new WaitForSeconds(1f);
         LASR13.SetActive(true);
 
-        yield return new WaitForSeconds(0.98f);
+        yield return new WaitForSeconds(1f);
         LASR14.SetActive(true);
 
-        yield return new WaitForSeconds(0.98f);
+        yield return new WaitForSeconds(1f);
         LASR15.SetActive(true);
 
-        yield return new WaitForSeconds(0.98f);
+        yield return new WaitForSeconds(1f);
         LASR16.SetActive(true);
 
-        yield return new WaitForSeconds(0.98f);
+        yield return new WaitForSeconds(1f);
         LASR1.SetActive(false);
         LASR2.SetActive(false);
         LASR3.SetActive(false);

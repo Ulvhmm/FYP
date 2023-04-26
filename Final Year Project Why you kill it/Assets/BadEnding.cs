@@ -29,6 +29,7 @@ public class BadEnding : MonoBehaviour
     public GameObject Page12;
 
     public GameObject ContinueHint;
+    public GameObject BackObject;
 
     public GameObject DialogSprite;
     public int keypressed = 0;
@@ -37,6 +38,7 @@ public class BadEnding : MonoBehaviour
     public bool isActive = true;
 
     public Animator BlackPanel;
+    public GameObject blackPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -59,7 +61,6 @@ public class BadEnding : MonoBehaviour
                 if (keypressed == 8 || keypressed == 9 || keypressed == 12 || keypressed == 14 || keypressed == 15 || keypressed == 16 || keypressed == 17)
                 {
                     NextLine();
-                    Invoke("CoolDown", 2.5f);
                 }
                 else
                 {
@@ -322,6 +323,9 @@ public class BadEnding : MonoBehaviour
         Page12.SetActive(true);
         yield return new WaitForSeconds (0.2f);
         BlackPanel.SetBool("isFade", false);
+        yield return new WaitForSeconds (2f);
+        blackPanel.SetActive(false);
+        BackObject.SetActive(true);
     }
 
 }

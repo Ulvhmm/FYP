@@ -4884,8 +4884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeb4a2f6fad39864fad5bf79c9888edf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthDecreaseInterval: 0.3
-  FireDamage: 50
+  FireDamage: 100
 --- !u!65 &8522069760001637967
 BoxCollider:
   m_ObjectHideFlags: 0

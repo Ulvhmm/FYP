@@ -4830,7 +4830,7 @@ MonoBehaviour:
   attackRadius: 3
   alertRadius: 200
   movingSpeed: 3
-  attack: 80
+  attack: 120
   lifetime: 10
   ExplosionPrefab: {fileID: 603252188518452281, guid: 9a0075a244afd5d4db051b93d0ae8ef3, type: 3}
 --- !u!143 &3877531278047691563

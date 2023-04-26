@@ -14,6 +14,7 @@ public class summonBoss : MonoBehaviour
 
     void OnTriggerEnter()
     {
+        Source.Stop();
         Boss.SetActive(true);
         HealthBar.SetActive(true);
         Source.PlayOneShot(Clip1, 0.5f);

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4330909079439748404}
   - component: {fileID: 2780229125110490311}
   - component: {fileID: 6576561735368691420}
-  - component: {fileID: 5685551512867833880}
+  - component: {fileID: -4704940586047450181}
   m_Layer: 0
   m_Name: LightningGround
   m_TagString: Untagged
@@ -49,7 +49,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -224,7 +224,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0, g: 0, b: 0, a: 1}
+      maxColor: {r: 0, g: 0, b: 0, a: 0.72156864}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -1306,10 +1306,10 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.60659146, g: 0.19900322, b: 0.9811321, a: 0.22352941}
-        key1: {r: 0.36829355, g: 0.23529413, b: 0.98039216, a: 1}
-        key2: {r: 0.39902055, g: 0.3915094, b: 1, a: 0.827451}
-        key3: {r: 0.39902055, g: 0.3915094, b: 1, a: 0.30980393}
+        key0: {r: 0.4339623, g: 0.02212357, b: 0, a: 0.22352941}
+        key1: {r: 0.745283, g: 0.46942076, b: 0.23553754, a: 1}
+        key2: {r: 0.7264151, g: 0.6488153, b: 0.16104485, a: 0.827451}
+        key3: {r: 1, g: 0.86289215, b: 0, a: 0.30980393}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
@@ -4813,7 +4813,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &5685551512867833880
+--- !u!114 &-4704940586047450181
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4827,6 +4827,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRadius: 5
   movingSpeed: 0
-  attack: 150
+  attack: 200
   lifetime: 15
   LightningPrefab: {fileID: 8727876464947143751, guid: 0576991a9be3d9e4fab17be6f499db4d, type: 3}

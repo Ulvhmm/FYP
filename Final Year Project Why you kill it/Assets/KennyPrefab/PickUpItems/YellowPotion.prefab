@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactableRadius: 2
   multiplier: 1
+  BaseHealth: 150
 --- !u!1001 &2122138583818746145
 PrefabInstance:
   m_ObjectHideFlags: 0

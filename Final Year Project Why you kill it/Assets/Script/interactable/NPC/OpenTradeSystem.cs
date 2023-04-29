@@ -24,15 +24,4 @@ public class OpenTradeSystem : Interactable
             Time.timeScale = 1;
         }
     }
-    
-    public void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            TradePanel.SetActive(true);
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-            Time.timeScale = 0;
-        }
-    }
 }

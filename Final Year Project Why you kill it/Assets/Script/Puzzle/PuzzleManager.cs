@@ -41,10 +41,12 @@ public class PuzzleManager : MonoBehaviour
     public AudioSource Music1;
     public Animator animator;
 
+    public GameObject NPC10F;
+
     void Start()
     {
         Music1 = GameObject.Find("AlterMusic").GetComponent<AudioSource>();
-        animator = GameObject.Find("NPC 1").GetComponent<Animator>();
+        animator = GameObject.Find("NPC 5F").GetComponent<Animator>();
 
         LASR1.SetActive(false);
         LASR2.SetActive(false);
@@ -151,5 +153,9 @@ public class PuzzleManager : MonoBehaviour
         animator.enabled = true;
 
         Music1.enabled = false;
+
+        NPC10F.SetActive(true);
+
+        GameObject.Find("NPC 5F").GetComponent<NPC>().enabled = true;
     }
 }

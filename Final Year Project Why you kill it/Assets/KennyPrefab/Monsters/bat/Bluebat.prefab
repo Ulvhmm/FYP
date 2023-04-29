@@ -461,7 +461,7 @@ MonoBehaviour:
   isTrapBoss: 0
   isFinalBoss: 0
   Health: 120
-  EnemyDef: 25
+  EnemyDef: 15
   EnemyExperience: 10
   EnemyGold: 3
   HP: {fileID: 2834793980181085046}

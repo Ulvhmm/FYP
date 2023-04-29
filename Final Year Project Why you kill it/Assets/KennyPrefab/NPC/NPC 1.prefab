@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1796264182638149153}
   - component: {fileID: 2262818830292888883}
-  - component: {fileID: 2262818830292888881}
   m_Layer: 0
   m_Name: NPC 1
   m_TagString: Untagged
@@ -55,67 +54,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2262818830292888881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1415903165136970907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59c45d6abde5ca845b3ae9f885917ef4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactableRadius: 3
-  interactableAngle: 80
-  BannerForInteractables: {fileID: 0}
-  dialogue:
-    names:
-    - UNKNOWN WARRIOR
-    - ???
-    - UNKNOWN WARRIOR
-    - SYLIN
-    - UNKNOWN WARRIOR
-    - UNKNOWN WARRIOR
-    - SYLIN
-    - SYLIN
-    - UNKNOWN WARRIOR
-    - SYLIN
-    - SYLIN
-    - SYLIN
-    - SYLIN
-    - SYLIN
-    - SYLIN
-    - MORGAN
-    - SYLIN
-    - MORGAN
-    sentences:
-    - what a weird place. but i have to revenge, for my brother.
-    - hey warrior!
-    - who are you?
-    - my name is sylin. i am a fairy. may i know why are you here?
-    - my brother came here two years ago, but he did not come back.
-    - i think he is  in danger. i have to know he is alive or not.
-    - i understand. unluckily, the entry of the tower is cursed by the demon.
-    - you can only come in but you cannot go out anymore, unless you beat the demon.
-    - i will beat him. and find out the truth.
-    - you are still too weak to see the demon. you need to make yourself stronger.
-    - there are tons of monsters in the tower, and there are total of 10 floors in
-      this tower.
-    - to enhance your power, you can collect gems and kill monsters to power up yourself.
-    - you can pick up RED GEMS to increase your attack power, and BLUE GEMS to increase
-      your defence.
-    - you can also kill enemy to gain experience to level up yourself.
-    - that is all that i can tell you. how can i call you?
-    - i am morgan.
-    - nice to meet you margan. wish you luck, and be careful.
-    - thank you.
-  interactable: 1
-  firstInteraction: 1
-  nextNPC: {fileID: 0}
-  ItemNumber: {fileID: 0}
-  DisabledNPC: {fileID: 0}
 --- !u!1 &2705148318469743773
 GameObject:
   m_ObjectHideFlags: 0

@@ -4263,10 +4263,10 @@ MonoBehaviour:
 
     PROGRAMMER
 
-    2D GRAPHICS ANIMATOR
+    2D DYNAMIC GRAPHICS
+    ANIMATOR
 
-    EFFECT
-    PRODUCER'
+    EFFECT PRODUCER'
 --- !u!222 &1425928146
 CanvasRenderer:
   m_ObjectHideFlags: 0

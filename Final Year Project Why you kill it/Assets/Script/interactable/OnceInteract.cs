@@ -7,7 +7,7 @@ public class OnceInteract : MonoBehaviour
     public float interactableRadius = 5;
     public float interactableAngle = 80;
 
-    public GameObject BannerForInteractables;
+    //public GameObject InteractionButton;
 
     Transform player;
 
@@ -28,11 +28,11 @@ public class OnceInteract : MonoBehaviour
 
         if (distance < interactableRadius && angle < interactableAngle)  //show banner
         {
-            //BannerForInteractables.SetActive(true);
+            //InteractionButton.SetActive(true);
         }
         else
         {
-            //BannerForInteractables.SetActive(false);
+            //InteractionButton.SetActive(false);
         }
 
         if (distance < interactableRadius && angle < interactableAngle && Input.GetKeyDown(KeyCode.Space))   // press "Space" to interact with objects

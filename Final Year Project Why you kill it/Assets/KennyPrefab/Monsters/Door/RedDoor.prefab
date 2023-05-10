@@ -47,7 +47,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactableRadius: 3
   interactableAngle: 80
-  BannerForInteractables: {fileID: 0}
   animator: {fileID: 1559140561164134914}
 --- !u!1001 &6126608714458198876
 PrefabInstance:

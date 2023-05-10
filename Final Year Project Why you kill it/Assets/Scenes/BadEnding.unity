@@ -2878,7 +2878,7 @@ MonoBehaviour:
   Page11: {fileID: 1793510724}
   Page12: {fileID: 160117109}
   ContinueHint: {fileID: 74014453}
-  BackObject: {fileID: 0}
+  BackObject: {fileID: 261331722}
   DialogSprite: {fileID: 1156677646}
   keypressed: 0
   DialogFinished: 0

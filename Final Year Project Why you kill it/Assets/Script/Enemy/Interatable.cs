@@ -10,6 +10,8 @@ public class Interatable : MonoBehaviour
 
     Transform player;
 
+    //public GameObject InteractionButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,10 +29,24 @@ public class Interatable : MonoBehaviour
 
         if (distance < interactableRadius && angle < interactableAngle && Input.GetKeyDown(KeyCode.Space))
         {
+            //InteractionButton.SetActive(true);
             Interact();
         }
 
+        else
+        {
+            //InteractionButton.SetActive(false);
+        }
+
+        /*
         if (distance < interactableRadius && angle < interactableAngle && Input.GetMouseButtonDown(0) && isAttacking == false)
+        {
+            Attack();
+            StartCoroutine(CoolDown());
+        }
+        */
+
+        if (Input.GetMouseButtonDown(0) && isAttacking == false)
         {
             Attack();
             StartCoroutine(CoolDown());
